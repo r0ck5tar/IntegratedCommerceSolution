@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="testRedWareHouse" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="RetailerDocServiceSoapBinding" type="wsdl" bindingName="{http://informatique.polytech.unice.fr/soa1/retailer/public}RetailerDocServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080//webservices/retailer-public?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080//webservices/retailer-public?wsdl"><con:part><con:url>http://localhost:8080//webservices/retailer-public?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="RetailerDocService" targetNamespace="http://informatique.polytech.unice.fr/soa1/retailer/public" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://informatique.polytech.unice.fr/soa1/retailer/public" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns3="http://schemas.xmlsoap.org/soap/http" xmlns:ns2="http://informatique.polytech.unice.fr/soa1/calculator/doc-demo" xmlns:ns1="http://informatique.polytech.unice.fr/soa1/retailer/doc">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://informatique.polytech.unice.fr/soa1/retailer/public" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="submit" type="tns:submit"/>
+      <xs:element name="submitResponse" type="tns:submitResponse"/>
+      <xs:complexType name="submit">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:retailerInput"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType abstract="true" name="retailerInput">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="process_delivery">
+        <xs:complexContent>
+          <xs:extension base="tns:retailerInput">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="delivery">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="product" type="tns:delivery_document"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="delivery_document">
+        <xs:sequence>
+          <xs:element name="depth" type="xs:int"/>
+          <xs:element name="height" type="xs:int"/>
+          <xs:element name="hour" type="xs:int"/>
+          <xs:element name="minutes" type="xs:int"/>
+          <xs:element name="product_ref" type="xs:string"/>
+          <xs:element name="quantity" type="xs:int"/>
+          <xs:element name="warehouse_id" type="xs:string"/>
+          <xs:element name="width" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="process_pickup">
+        <xs:complexContent>
+          <xs:extension base="tns:retailerInput">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="pickup">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="product" type="tns:pickup_document"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="pickup_document">
+        <xs:sequence>
+          <xs:element name="hour" type="xs:int"/>
+          <xs:element name="minutes" type="xs:int"/>
+          <xs:element name="product_ref" type="xs:string"/>
+          <xs:element name="warehouse_ref" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="submitResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="result" type="tns:jobResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType abstract="true" name="jobResult">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="information">
+        <xs:complexContent>
+          <xs:extension base="tns:jobResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="info" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="list_of_information">
+        <xs:complexContent>
+          <xs:extension base="tns:jobResult">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="data_inf">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="information" type="tns:information"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://informatique.polytech.unice.fr/soa1/retailer/doc" xmlns:tns="http://informatique.polytech.unice.fr/soa1/retailer/doc">
+      <xsd:element name="BadJobFault" type="tns:BadJobFault"/>
+      <xsd:complexType name="BadJobFault">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="message" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://informatique.polytech.unice.fr/soa1/calculator/doc-demo" xmlns:tns="http://informatique.polytech.unice.fr/soa1/calculator/doc-demo">
+      <xsd:element name="UnknownOperation" type="tns:UnknownOperation"/>
+      <xsd:complexType name="UnknownOperation">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="message" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="submitResponse">
+    <wsdl:part element="tns:submitResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UnsupportedArgumentFault">
+    <wsdl:part element="ns2:UnknownOperation" name="UnsupportedArgumentFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submit">
+    <wsdl:part element="tns:submit" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="BadJobFault">
+    <wsdl:part element="ns1:BadJobFault" name="BadJobFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RetailerDoc">
+    <wsdl:operation name="submit">
+      <wsdl:input message="tns:submit" name="submit"></wsdl:input>
+      <wsdl:output message="tns:submitResponse" name="submitResponse"></wsdl:output>
+      <wsdl:fault message="tns:UnsupportedArgumentFault" name="UnsupportedArgumentFault"></wsdl:fault>
+      <wsdl:fault message="tns:BadJobFault" name="BadJobFault"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RetailerDocServiceSoapBinding" type="tns:RetailerDoc">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="submit">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="submit">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="submitResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="UnsupportedArgumentFault">
+        <soap:fault name="UnsupportedArgumentFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="BadJobFault">
+        <soap:fault name="BadJobFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RetailerDocService">
+    <wsdl:port binding="tns:RetailerDocServiceSoapBinding" name="RetailerPort">
+      <soap:address location="http://localhost:8080/webservices/retailer-public"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/webservices/retailer-public</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="submit" bindingOperationName="submit" type="Request-Response" outputName="submitResponse" inputName="submit" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/retailer-public</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pub="http://informatique.polytech.unice.fr/soa1/retailer/public">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <pub:submit>
+<request xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pub:process_delivery">
+         <!--Optional:-->
+         <delivery>
+         		<product>
+				<hour>12</hour>
+				<minutes>30</minutes>
+				<width>20</width>
+				<height>10</height>
+				<depth>5</depth>
+				<quantity>500</quantity>
+				<product_ref>40342</product_ref>
+				<warehouse_id>31231</warehouse_id>
+         		</product>
+
+         		<product>
+				<hour>11</hour>
+				<minutes>20</minutes>
+				<width>40</width>
+				<height>5</height>
+				<depth>10</depth>
+				<quantity>10</quantity>
+				<product_ref>3103912</product_ref>
+				<warehouse_id>3123312</warehouse_id>
+         		</product>
+
+         		
+         </delivery>
+      </request>
+      </pub:submit>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://informatique.polytech.unice.fr/soa1/retailer/public/RetailerDoc/submit"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="EmployeeRPCPrivateServiceSoapBinding" type="wsdl" bindingName="{http://informatique.polytech.unice.fr/soa1/employeeRPC/private}EmployeeRPCPrivateServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080//webservices/employee-private?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080//webservices/employee-private?WSDL"><con:part><con:url>http://localhost:8080//webservices/employee-private?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="EmployeeRPCPrivateService" targetNamespace="http://informatique.polytech.unice.fr/soa1/employeeRPC/private" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://informatique.polytech.unice.fr/soa1/employeeRPC/private" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://informatique.polytech.unice.fr/soa1/employeeRPC/private" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="get_product_location" type="tns:get_product_location"/>
+      <xs:element name="get_product_locationResponse" type="tns:get_product_locationResponse"/>
+      <xs:element name="get_task" type="tns:get_task"/>
+      <xs:element name="get_taskResponse" type="tns:get_taskResponse"/>
+      <xs:element name="place_product" type="tns:place_product"/>
+      <xs:element name="place_productResponse" type="tns:place_productResponse"/>
+      <xs:complexType name="get_task">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="get_taskResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tasks" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="place_product">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="product_ref" type="xs:string"/>
+          <xs:element name="product_width" type="xs:int"/>
+          <xs:element name="product_height" type="xs:int"/>
+          <xs:element name="product_depth" type="xs:int"/>
+          <xs:element name="product_quantity" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="place_productResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="placement" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="get_product_location">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="product_ref" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="get_product_locationResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="placement_toto" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="UnknownTask" type="tns:UnknownTask"/>
+      <xs:complexType name="UnknownTask">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="UnknownContent" type="tns:UnknownContent"/>
+      <xs:complexType name="UnknownContent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="UnknownProductReference" type="tns:UnknownProductReference"/>
+      <xs:complexType name="UnknownProductReference">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="place_product">
+    <wsdl:part element="tns:place_product" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="place_productResponse">
+    <wsdl:part element="tns:place_productResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="get_product_locationResponse">
+    <wsdl:part element="tns:get_product_locationResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="get_task">
+    <wsdl:part element="tns:get_task" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="get_taskResponse">
+    <wsdl:part element="tns:get_taskResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UnknownTaskFault">
+    <wsdl:part element="tns:UnknownTask" name="UnknownTaskFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UnknownContentFault">
+    <wsdl:part element="tns:UnknownContent" name="UnknownContentFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="get_product_location">
+    <wsdl:part element="tns:get_product_location" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UnknownProductReference">
+    <wsdl:part element="tns:UnknownProductReference" name="UnknownProductReference"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="EmployeeRPC">
+    <wsdl:operation name="get_task">
+      <wsdl:input message="tns:get_task" name="get_task"></wsdl:input>
+      <wsdl:output message="tns:get_taskResponse" name="get_taskResponse"></wsdl:output>
+      <wsdl:fault message="tns:UnknownContentFault" name="UnknownContentFault"></wsdl:fault>
+      <wsdl:fault message="tns:UnknownTaskFault" name="UnknownTaskFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="place_product">
+      <wsdl:input message="tns:place_product" name="place_product"></wsdl:input>
+      <wsdl:output message="tns:place_productResponse" name="place_productResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_product_location">
+      <wsdl:input message="tns:get_product_location" name="get_product_location"></wsdl:input>
+      <wsdl:output message="tns:get_product_locationResponse" name="get_product_locationResponse"></wsdl:output>
+      <wsdl:fault message="tns:UnknownProductReference" name="UnknownProductReference"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EmployeeRPCPrivateServiceSoapBinding" type="tns:EmployeeRPC">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="get_task">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="get_task">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="get_taskResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="UnknownContentFault">
+        <soap:fault name="UnknownContentFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnknownTaskFault">
+        <soap:fault name="UnknownTaskFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="place_product">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="place_product">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="place_productResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_product_location">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="get_product_location">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="get_product_locationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="UnknownProductReference">
+        <soap:fault name="UnknownProductReference" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EmployeeRPCPrivateService">
+    <wsdl:port binding="tns:EmployeeRPCPrivateServiceSoapBinding" name="EmployeeRPCPrivatePort">
+      <soap:address location="http://localhost:8080/webservices/employee-private"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/webservices/employee-private</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="get_product_location" bindingOperationName="get_product_location" type="Request-Response" outputName="get_product_locationResponse" inputName="get_product_location" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/employee-private</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/employeeRPC/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:get_product_location>
+         <!--Optional:-->
+         <product_ref>W3P3NV5OZ24BD1K</product_ref>
+      </priv:get_product_location>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://informatique.polytech.unice.fr/soa1/employeeRPC/private/EmployeeRPC/get_product_location"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="get_task" bindingOperationName="get_task" type="Request-Response" outputName="get_taskResponse" inputName="get_task" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/employee-private</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/employeeRPC/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:get_task>
+         <!--Optional:-->
+         <id>EP2</id>
+      </priv:get_task>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://informatique.polytech.unice.fr/soa1/employeeRPC/private/EmployeeRPC/get_task"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="place_product" bindingOperationName="place_product" type="Request-Response" outputName="place_productResponse" inputName="place_product" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/employee-private</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/employeeRPC/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:place_product>
+         <!--Optional:-->
+         <product_ref>42340234</product_ref>
+
+      </priv:place_product>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://informatique.polytech.unice.fr/soa1/employeeRPC/private/EmployeeRPC/place_product"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="RetailerDocServiceSoapBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="submit TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="submit"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RetailerDocServiceSoapBinding</con:interface><con:operation>submit</con:operation><con:request name="submit"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/retailer-public</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pub="http://informatique.polytech.unice.fr/soa1/retailer/public">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <pub:submit>
+         <!--Optional:-->
+         <request/>
+      </pub:submit>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://informatique.polytech.unice.fr/soa1/retailer/public/RetailerDoc/submit"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite name="EmployeeRPCPrivateServiceSoapBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="get_product_location TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="get_product_location"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeRPCPrivateServiceSoapBinding</con:interface><con:operation>get_product_location</con:operation><con:request name="get_product_location"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/employee-private</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/employeeRPC/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:get_product_location>
+         <!--Optional:-->
+         <product_ref>?</product_ref>
+      </priv:get_product_location>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://informatique.polytech.unice.fr/soa1/employeeRPC/private/EmployeeRPC/get_product_location"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="get_task TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="get_task"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeRPCPrivateServiceSoapBinding</con:interface><con:operation>get_task</con:operation><con:request name="get_task"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/employee-private</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/employeeRPC/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:get_task>
+         <!--Optional:-->
+         <id>?</id>
+      </priv:get_task>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://informatique.polytech.unice.fr/soa1/employeeRPC/private/EmployeeRPC/get_task"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="place_product TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="place_product"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeRPCPrivateServiceSoapBinding</con:interface><con:operation>place_product</con:operation><con:request name="place_product"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/employee-private</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/employeeRPC/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:place_product>
+         <!--Optional:-->
+         <product_ref>?</product_ref>
+         <product_width>?</product_width>
+         <product_height>?</product_height>
+         <product_depth>?</product_depth>
+         <product_quantity>?</product_quantity>
+      </priv:place_product>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://informatique.polytech.unice.fr/soa1/employeeRPC/private/EmployeeRPC/place_product"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

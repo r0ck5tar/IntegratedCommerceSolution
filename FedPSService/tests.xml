@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="FedPS-Tests" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="TestSuite" value="FedPS-Tests"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Save Project" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="ManagementRPCPrivateServiceSoapBinding" type="wsdl" bindingName="{http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private}ManagementRPCPrivateServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080//webservices/Management-Private-RPC?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080//webservices/Management-Private-RPC?wsdl"><con:part><con:url>http://localhost:8080//webservices/Management-Private-RPC?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ManagementRPCPrivateService" targetNamespace="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="consult_parcel_stats" type="tns:consult_parcel_stats"/>
+      <xs:element name="consult_parcel_statsResponse" type="tns:consult_parcel_statsResponse"/>
+      <xs:element name="partnership_confirmation" type="tns:partnership_confirmation"/>
+      <xs:element name="partnership_confirmationResponse" type="tns:partnership_confirmationResponse"/>
+      <xs:element name="send_discount_code" type="tns:send_discount_code"/>
+      <xs:element name="send_discount_codeResponse" type="tns:send_discount_codeResponse"/>
+      <xs:complexType name="send_discount_code">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="customers_mailing_list" type="xs:string"/>
+          <xs:element name="discount_offer" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="send_discount_codeResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="discount" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="partnership_confirmation">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="partner_mail" type="xs:string"/>
+          <xs:element minOccurs="0" name="partnership_code" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="partnership_confirmationResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="partnership" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="consult_parcel_stats">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="consult_parcel_statsResponse">
+        <xs:sequence>
+          <xs:element name="stats">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="entry">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element minOccurs="0" name="key" type="xs:anyType"/>
+                      <xs:element minOccurs="0" name="value" type="xs:anyType"/>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="UnknownParcelFault" type="tns:UnknownParcelFault"/>
+      <xs:complexType name="UnknownParcelFault">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="partnership_confirmationResponse">
+    <wsdl:part element="tns:partnership_confirmationResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consult_parcel_statsResponse">
+    <wsdl:part element="tns:consult_parcel_statsResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UnknownParcelFault">
+    <wsdl:part element="tns:UnknownParcelFault" name="UnknownParcelFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="send_discount_code">
+    <wsdl:part element="tns:send_discount_code" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="send_discount_codeResponse">
+    <wsdl:part element="tns:send_discount_codeResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="partnership_confirmation">
+    <wsdl:part element="tns:partnership_confirmation" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consult_parcel_stats">
+    <wsdl:part element="tns:consult_parcel_stats" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Management">
+    <wsdl:operation name="send_discount_code">
+      <wsdl:input message="tns:send_discount_code" name="send_discount_code"></wsdl:input>
+      <wsdl:output message="tns:send_discount_codeResponse" name="send_discount_codeResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="partnership_confirmation">
+      <wsdl:input message="tns:partnership_confirmation" name="partnership_confirmation"></wsdl:input>
+      <wsdl:output message="tns:partnership_confirmationResponse" name="partnership_confirmationResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consult_parcel_stats">
+      <wsdl:input message="tns:consult_parcel_stats" name="consult_parcel_stats"></wsdl:input>
+      <wsdl:output message="tns:consult_parcel_statsResponse" name="consult_parcel_statsResponse"></wsdl:output>
+      <wsdl:fault message="tns:UnknownParcelFault" name="UnknownParcelFault"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ManagementRPCPrivateServiceSoapBinding" type="tns:Management">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="send_discount_code">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="send_discount_code">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="send_discount_codeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="partnership_confirmation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="partnership_confirmation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="partnership_confirmationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consult_parcel_stats">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consult_parcel_stats">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consult_parcel_statsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="UnknownParcelFault">
+        <soap:fault name="UnknownParcelFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ManagementRPCPrivateService">
+    <wsdl:port binding="tns:ManagementRPCPrivateServiceSoapBinding" name="ManagementRPCPrivatePort">
+      <soap:address location="http://localhost:8080/webservices/Management-Private-RPC"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/webservices/Management-Private-RPC</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="consult_parcel_stats" bindingOperationName="consult_parcel_stats" type="Request-Response" outputName="consult_parcel_statsResponse" inputName="consult_parcel_stats" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Management-Private-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:consult_parcel_stats/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private/Management/consult_parcel_stats"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="partnership_confirmation" bindingOperationName="partnership_confirmation" type="Request-Response" outputName="partnership_confirmationResponse" inputName="partnership_confirmation" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Management-Private-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:partnership_confirmation>
+         <!--Optional:-->
+         <partner_mail>?</partner_mail>
+         <!--Optional:-->
+         <partnership_code>?</partnership_code>
+      </priv:partnership_confirmation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private/Management/partnership_confirmation"/></con:call></con:operation><con:operation isOneWay="false" action="" name="send_discount_code" bindingOperationName="send_discount_code" type="Request-Response" outputName="send_discount_codeResponse" inputName="send_discount_code" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Management-Private-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:send_discount_code>
+         <!--Zero or more repetitions:-->
+         <customers_mailing_list>?</customers_mailing_list>
+         <discount_offer>?</discount_offer>
+      </priv:send_discount_code>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private/Management/send_discount_code"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="CustomerRPCPublicServiceSoapBinding" type="wsdl" bindingName="{http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public}CustomerRPCPublicServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080//webservices/Customer-Public-RPC?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080//webservices/Customer-Public-RPC?wsdl"><con:part><con:url>http://localhost:8080//webservices/Customer-Public-RPC?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="CustomerRPCPublicService" targetNamespace="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="ask_for_quote" type="tns:ask_for_quote"/>
+      <xs:element name="ask_for_quoteResponse" type="tns:ask_for_quoteResponse"/>
+      <xs:element name="ask_for_quote_with_promo_code" type="tns:ask_for_quote_with_promo_code"/>
+      <xs:element name="ask_for_quote_with_promo_codeResponse" type="tns:ask_for_quote_with_promo_codeResponse"/>
+      <xs:element name="ask_for_transport" type="tns:ask_for_transport"/>
+      <xs:element name="ask_for_transportResponse" type="tns:ask_for_transportResponse"/>
+      <xs:element name="ask_for_transport_with_promo_code" type="tns:ask_for_transport_with_promo_code"/>
+      <xs:element name="ask_for_transport_with_promo_codeResponse" type="tns:ask_for_transport_with_promo_codeResponse"/>
+      <xs:element name="follow_parcel_delivery" type="tns:follow_parcel_delivery"/>
+      <xs:element name="follow_parcel_deliveryResponse" type="tns:follow_parcel_deliveryResponse"/>
+      <xs:complexType name="ask_for_quote">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parcel" type="tns:parcel"/>
+          <xs:element minOccurs="0" name="pick_up_date" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="parcel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="delivery_address" type="xs:string"/>
+          <xs:element minOccurs="0" name="parcel_dimensions" type="tns:dimensions"/>
+          <xs:element minOccurs="0" name="parcelID" type="xs:string"/>
+          <xs:element minOccurs="0" name="pick_up_address" type="xs:string"/>
+          <xs:element name="parcel_weight" type="xs:double"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="dimensions">
+        <xs:sequence>
+          <xs:element name="depth" type="xs:double"/>
+          <xs:element name="height" type="xs:double"/>
+          <xs:element name="width" type="xs:double"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ask_for_quoteResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="quote" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="follow_parcel_delivery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parcel_id" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="follow_parcel_deliveryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="follow" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ask_for_transport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parcel" type="tns:parcel"/>
+          <xs:element minOccurs="0" name="pick_up_date" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ask_for_transportResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="transport" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ask_for_quote_with_promo_code">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parcel" type="tns:parcel"/>
+          <xs:element minOccurs="0" name="pick_up_date" type="xs:string"/>
+          <xs:element name="promo_code" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ask_for_quote_with_promo_codeResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="promo_quote" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ask_for_transport_with_promo_code">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parcel" type="tns:parcel"/>
+          <xs:element minOccurs="0" name="pick_up_date" type="xs:string"/>
+          <xs:element name="promo_code" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ask_for_transport_with_promo_codeResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="promo_transport" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ask_for_quoteResponse">
+    <wsdl:part element="tns:ask_for_quoteResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ask_for_quote_with_promo_code">
+    <wsdl:part element="tns:ask_for_quote_with_promo_code" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ask_for_quote_with_promo_codeResponse">
+    <wsdl:part element="tns:ask_for_quote_with_promo_codeResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ask_for_quote">
+    <wsdl:part element="tns:ask_for_quote" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="follow_parcel_delivery">
+    <wsdl:part element="tns:follow_parcel_delivery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ask_for_transportResponse">
+    <wsdl:part element="tns:ask_for_transportResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ask_for_transport">
+    <wsdl:part element="tns:ask_for_transport" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="follow_parcel_deliveryResponse">
+    <wsdl:part element="tns:follow_parcel_deliveryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ask_for_transport_with_promo_code">
+    <wsdl:part element="tns:ask_for_transport_with_promo_code" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ask_for_transport_with_promo_codeResponse">
+    <wsdl:part element="tns:ask_for_transport_with_promo_codeResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Customer">
+    <wsdl:operation name="ask_for_quote">
+      <wsdl:input message="tns:ask_for_quote" name="ask_for_quote"></wsdl:input>
+      <wsdl:output message="tns:ask_for_quoteResponse" name="ask_for_quoteResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="follow_parcel_delivery">
+      <wsdl:input message="tns:follow_parcel_delivery" name="follow_parcel_delivery"></wsdl:input>
+      <wsdl:output message="tns:follow_parcel_deliveryResponse" name="follow_parcel_deliveryResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ask_for_transport">
+      <wsdl:input message="tns:ask_for_transport" name="ask_for_transport"></wsdl:input>
+      <wsdl:output message="tns:ask_for_transportResponse" name="ask_for_transportResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ask_for_quote_with_promo_code">
+      <wsdl:input message="tns:ask_for_quote_with_promo_code" name="ask_for_quote_with_promo_code"></wsdl:input>
+      <wsdl:output message="tns:ask_for_quote_with_promo_codeResponse" name="ask_for_quote_with_promo_codeResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ask_for_transport_with_promo_code">
+      <wsdl:input message="tns:ask_for_transport_with_promo_code" name="ask_for_transport_with_promo_code"></wsdl:input>
+      <wsdl:output message="tns:ask_for_transport_with_promo_codeResponse" name="ask_for_transport_with_promo_codeResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomerRPCPublicServiceSoapBinding" type="tns:Customer">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ask_for_quote">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ask_for_quote">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ask_for_quoteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="follow_parcel_delivery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="follow_parcel_delivery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="follow_parcel_deliveryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ask_for_transport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ask_for_transport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ask_for_transportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ask_for_quote_with_promo_code">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ask_for_quote_with_promo_code">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ask_for_quote_with_promo_codeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ask_for_transport_with_promo_code">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ask_for_transport_with_promo_code">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ask_for_transport_with_promo_codeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CustomerRPCPublicService">
+    <wsdl:port binding="tns:CustomerRPCPublicServiceSoapBinding" name="CustomerRPCPublicPort">
+      <soap:address location="http://localhost:8080/webservices/Customer-Public-RPC"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/webservices/Customer-Public-RPC</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="ask_for_quote" bindingOperationName="ask_for_quote" type="Request-Response" outputName="ask_for_quoteResponse" inputName="ask_for_quote" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Customer-Public-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pub="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <pub:ask_for_quote>
+         <!--Optional:-->
+         <parcel>
+            <!--Optional:-->
+            <delivery_address>?</delivery_address>
+            <!--Optional:-->
+            <parcel_dimensions>
+               <depth>?</depth>
+               <height>?</height>
+               <width>?</width>
+            </parcel_dimensions>
+            <!--Optional:-->
+            <parcelID>?</parcelID>
+            <!--Optional:-->
+            <pick_up_address>?</pick_up_address>
+            <parcel_weight>?</parcel_weight>
+         </parcel>
+         <!--Optional:-->
+         <pick_up_date>?</pick_up_date>
+      </pub:ask_for_quote>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public/Customer/ask_for_quote"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="ask_for_quote_with_promo_code" bindingOperationName="ask_for_quote_with_promo_code" type="Request-Response" outputName="ask_for_quote_with_promo_codeResponse" inputName="ask_for_quote_with_promo_code" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Customer-Public-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pub="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <pub:ask_for_quote_with_promo_code>
+         <!--Optional:-->
+         <parcel>
+            <!--Optional:-->
+            <delivery_address>?</delivery_address>
+            <!--Optional:-->
+            <parcel_dimensions>
+               <depth>?</depth>
+               <height>?</height>
+               <width>?</width>
+            </parcel_dimensions>
+            <!--Optional:-->
+            <parcelID>?</parcelID>
+            <!--Optional:-->
+            <pick_up_address>?</pick_up_address>
+            <parcel_weight>?</parcel_weight>
+         </parcel>
+         <!--Optional:-->
+         <pick_up_date>?</pick_up_date>
+         <promo_code>?</promo_code>
+      </pub:ask_for_quote_with_promo_code>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public/Customer/ask_for_quote_with_promo_code"/></con:call></con:operation><con:operation isOneWay="false" action="" name="ask_for_transport" bindingOperationName="ask_for_transport" type="Request-Response" outputName="ask_for_transportResponse" inputName="ask_for_transport" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Customer-Public-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pub="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <pub:ask_for_transport>
+         <!--Optional:-->
+         <parcel>
+            <!--Optional:-->
+            <delivery_address>?</delivery_address>
+            <!--Optional:-->
+            <parcel_dimensions>
+               <depth>?</depth>
+               <height>?</height>
+               <width>?</width>
+            </parcel_dimensions>
+            <!--Optional:-->
+            <parcelID>?</parcelID>
+            <!--Optional:-->
+            <pick_up_address>?</pick_up_address>
+            <parcel_weight>?</parcel_weight>
+         </parcel>
+         <!--Optional:-->
+         <pick_up_date>?</pick_up_date>
+      </pub:ask_for_transport>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public/Customer/ask_for_transport"/></con:call></con:operation><con:operation isOneWay="false" action="" name="ask_for_transport_with_promo_code" bindingOperationName="ask_for_transport_with_promo_code" type="Request-Response" outputName="ask_for_transport_with_promo_codeResponse" inputName="ask_for_transport_with_promo_code" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Customer-Public-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pub="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <pub:ask_for_transport_with_promo_code>
+         <!--Optional:-->
+         <parcel>
+            <!--Optional:-->
+            <delivery_address>?</delivery_address>
+            <!--Optional:-->
+            <parcel_dimensions>
+               <depth>?</depth>
+               <height>?</height>
+               <width>?</width>
+            </parcel_dimensions>
+            <!--Optional:-->
+            <parcelID>?</parcelID>
+            <!--Optional:-->
+            <pick_up_address>?</pick_up_address>
+            <parcel_weight>?</parcel_weight>
+         </parcel>
+         <!--Optional:-->
+         <pick_up_date>?</pick_up_date>
+         <promo_code>?</promo_code>
+      </pub:ask_for_transport_with_promo_code>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public/Customer/ask_for_transport_with_promo_code"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="follow_parcel_delivery" bindingOperationName="follow_parcel_delivery" type="Request-Response" outputName="follow_parcel_deliveryResponse" inputName="follow_parcel_delivery" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Customer-Public-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pub="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <pub:follow_parcel_delivery>
+         <!--Optional:-->
+         <parcel_id>#15112FPS8999Z</parcel_id>
+      </pub:follow_parcel_delivery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public/Customer/follow_parcel_delivery"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="DriversRPCPrivateServiceSoapBinding" type="wsdl" bindingName="{http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private}DriversRPCPrivateServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080//webservices/Drivers-Private-RPC?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080//webservices/Drivers-Private-RPC?wsdl"><con:part><con:url>http://localhost:8080//webservices/Drivers-Private-RPC?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="DriversRPCPrivateService" targetNamespace="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="consult_round_itinerary" type="tns:consult_round_itinerary"/>
+      <xs:element name="consult_round_itineraryResponse" type="tns:consult_round_itineraryResponse"/>
+      <xs:element name="scan_parcel" type="tns:scan_parcel"/>
+      <xs:element name="scan_parcelResponse" type="tns:scan_parcelResponse"/>
+      <xs:complexType name="scan_parcel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parcel_id" type="xs:string"/>
+          <xs:element minOccurs="0" name="new_status" type="tns:status"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="scan_parcelResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="scan" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="consult_round_itinerary">
+        <xs:sequence>
+          <xs:element name="driver_id" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="consult_round_itineraryResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="itinerary" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="status">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="STORAGE"/>
+          <xs:enumeration value="IN_TRANSIT"/>
+          <xs:enumeration value="DELIVERED"/>
+          <xs:enumeration value="WAITING_FOR_PICK_UP"/>
+          <xs:enumeration value="ARRIVAL_SCAN"/>
+          <xs:enumeration value="CUSTOMS"/>
+          <xs:enumeration value="UNKNOWN"/>
+          <xs:enumeration value="LATE_DELIVERY"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="UnknownParcelFault" type="tns:UnknownParcelFault"/>
+      <xs:complexType name="UnknownParcelFault">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="UnknownParcelFault">
+    <wsdl:part element="tns:UnknownParcelFault" name="UnknownParcelFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consult_round_itinerary">
+    <wsdl:part element="tns:consult_round_itinerary" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="scan_parcelResponse">
+    <wsdl:part element="tns:scan_parcelResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consult_round_itineraryResponse">
+    <wsdl:part element="tns:consult_round_itineraryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="scan_parcel">
+    <wsdl:part element="tns:scan_parcel" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Drivers">
+    <wsdl:operation name="scan_parcel">
+      <wsdl:input message="tns:scan_parcel" name="scan_parcel"></wsdl:input>
+      <wsdl:output message="tns:scan_parcelResponse" name="scan_parcelResponse"></wsdl:output>
+      <wsdl:fault message="tns:UnknownParcelFault" name="UnknownParcelFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consult_round_itinerary">
+      <wsdl:input message="tns:consult_round_itinerary" name="consult_round_itinerary"></wsdl:input>
+      <wsdl:output message="tns:consult_round_itineraryResponse" name="consult_round_itineraryResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DriversRPCPrivateServiceSoapBinding" type="tns:Drivers">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="scan_parcel">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="scan_parcel">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="scan_parcelResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="UnknownParcelFault">
+        <soap:fault name="UnknownParcelFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consult_round_itinerary">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consult_round_itinerary">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consult_round_itineraryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DriversRPCPrivateService">
+    <wsdl:port binding="tns:DriversRPCPrivateServiceSoapBinding" name="DriversRPCPrivatePort">
+      <soap:address location="http://localhost:8080/webservices/Drivers-Private-RPC"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/webservices/Drivers-Private-RPC</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="consult_round_itinerary" bindingOperationName="consult_round_itinerary" type="Request-Response" outputName="consult_round_itineraryResponse" inputName="consult_round_itinerary" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Drivers-Private-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:consult_round_itinerary>
+         <driver_id>?</driver_id>
+      </priv:consult_round_itinerary>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private/Drivers/consult_round_itinerary"/></con:call></con:operation><con:operation isOneWay="false" action="" name="scan_parcel" bindingOperationName="scan_parcel" type="Request-Response" outputName="scan_parcelResponse" inputName="scan_parcel" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Drivers-Private-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:scan_parcel>
+         <!--Optional:-->
+         <parcel_id>?</parcel_id>
+         <!--Optional:-->
+         <new_status>?</new_status>
+      </priv:scan_parcel>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private/Drivers/scan_parcel"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="FedPS-Tests"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Manager Supervision" searchProperties="true"><con:settings/><con:testStep type="request" name="Check NetWork"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ManagementRPCPrivateServiceSoapBinding</con:interface><con:operation>consult_parcel_stats</con:operation><con:request name="Check NetWork"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Management-Private-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:consult_parcel_stats/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Send Discount by Mail"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ManagementRPCPrivateServiceSoapBinding</con:interface><con:operation>send_discount_code</con:operation><con:request name="Send Discount by Mail"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Management-Private-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:send_discount_code>
+      	<!--Zero or more repetitions:-->
+         <customers_mailing_list>"customer1@notmail.com"</customers_mailing_list>
+         <customers_mailing_list>"customer2@notmail.com"</customers_mailing_list>
+         <customers_mailing_list>"customer3@notmail.com"</customers_mailing_list>
+         <customers_mailing_list>"customer4@notmail.com"</customers_mailing_list>
+         <customers_mailing_list>"customer5@notmail.com"</customers_mailing_list>
+         <discount_offer>10</discount_offer>
+      </priv:send_discount_code>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Driver Itinerary" searchProperties="true" id="daf05e9b-1ad6-4ff5-a932-1ed6de15175c"><con:settings/><con:testStep type="request" name="Start Round"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DriversRPCPrivateServiceSoapBinding</con:interface><con:operation>consult_round_itinerary</con:operation><con:request name="Start Round"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Drivers-Private-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:consult_round_itinerary>
+         <driver_id>42</driver_id>
+      </priv:consult_round_itinerary>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="PickUp Parcel 1st Step"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DriversRPCPrivateServiceSoapBinding</con:interface><con:operation>scan_parcel</con:operation><con:request name="PickUp Parcel 1st Step"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Drivers-Private-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:scan_parcel><!--Optional:-->
+         <parcel_id>#1515213FPS547Z</parcel_id>
+         <!--Optional:-->
+         <new_status>ARRIVAL_SCAN</new_status>
+      </priv:scan_parcel>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="PickUp Parcel 2nd Step"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DriversRPCPrivateServiceSoapBinding</con:interface><con:operation>scan_parcel</con:operation><con:request name="PickUp Parcel 2nd Step"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Drivers-Private-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:scan_parcel><!--Optional:-->
+         <parcel_id>#15147895FPS41Z</parcel_id>
+         <!--Optional:-->
+         <new_status>ARRIVAL_SCAN</new_status>
+      </priv:scan_parcel>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Deliver Parcel 1st Step"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DriversRPCPrivateServiceSoapBinding</con:interface><con:operation>scan_parcel</con:operation><con:request name="Deliver Parcel 1st Step"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Drivers-Private-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:scan_parcel><!--Optional:-->
+         <parcel_id>#15112FPS8999Z</parcel_id>
+         <!--Optional:-->
+         <new_status>DELIVERED</new_status>
+      </priv:scan_parcel>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="PickUp Parcel 3rd Step"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DriversRPCPrivateServiceSoapBinding</con:interface><con:operation>scan_parcel</con:operation><con:request name="PickUp Parcel 3rd Step"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Drivers-Private-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:scan_parcel><!--Optional:-->
+         <parcel_id>#1512FPS478Z</parcel_id>
+         <!--Optional:-->
+         <new_status>ARRIVAL_SCAN</new_status>
+      </priv:scan_parcel>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Deliver Parcel 2nd Step"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DriversRPCPrivateServiceSoapBinding</con:interface><con:operation>scan_parcel</con:operation><con:request name="Deliver Parcel 2nd Step"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Drivers-Private-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:scan_parcel><!--Optional:-->
+         <parcel_id>#15112000FPS1000Z</parcel_id>
+         <!--Optional:-->
+         <new_status>DELIVERED</new_status>
+      </priv:scan_parcel>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Check Status"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ManagementRPCPrivateServiceSoapBinding</con:interface><con:operation>consult_parcel_stats</con:operation><con:request name="Check Status"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Management-Private-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:priv="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/private">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <priv:consult_parcel_stats/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="BookShop Keeper" searchProperties="true"><con:settings/><con:testStep type="request" name="First Pick Up"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CustomerRPCPublicServiceSoapBinding</con:interface><con:operation>ask_for_transport_with_promo_code</con:operation><con:request name="First Pick Up"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Customer-Public-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pub="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <pub:ask_for_transport_with_promo_code>
+         	<!--Optional:-->
+         <parcel>
+            <!--Optional:-->
+            <delivery_address>Address Customer 1</delivery_address>
+            <!--Optional:-->
+            <parcel_dimensions>
+               <depth>2</depth>
+               <height>1.7</height>
+               <width>1.5</width>
+            </parcel_dimensions>
+            <!--Optional:-->
+            <parcelID>#15112FPS8999Z</parcelID>
+            <!--Optional:-->
+            <pick_up_address>Book shop Address</pick_up_address>
+            <parcel_weight>10.5</parcel_weight>
+         </parcel>
+         <!--Optional:-->
+         <pick_up_date>2014-12-10</pick_up_date>
+         <promo_code>1234</promo_code>
+      </pub:ask_for_transport_with_promo_code>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Send Parcel Reference 1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CustomerRPCPublicServiceSoapBinding</con:interface><con:operation>follow_parcel_delivery</con:operation><con:request name="Send Parcel Reference 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Customer-Public-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pub="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <pub:follow_parcel_delivery><!--Optional:-->
+         <parcel_id>#15112FPS8999Z</parcel_id>
+      </pub:follow_parcel_delivery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Simple Contains" name="Contains"><con:configuration><token/><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Second Pick Up"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CustomerRPCPublicServiceSoapBinding</con:interface><con:operation>ask_for_transport_with_promo_code</con:operation><con:request name="Second Pick Up"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Customer-Public-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pub="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <pub:ask_for_transport_with_promo_code>
+         <!--Optional:-->
+         <parcel>
+            <!--Optional:-->
+            <delivery_address>Address Customer 2</delivery_address>
+            <!--Optional:-->
+            <parcel_dimensions>
+               <depth>2</depth>
+               <height>2</height>
+               <width>2</width>
+            </parcel_dimensions>
+            <!--Optional:-->
+            <parcelID>#1514569FPS123Z</parcelID>
+            <!--Optional:-->
+            <pick_up_address>Address BookShop</pick_up_address>
+            <parcel_weight>4.7</parcel_weight>
+         </parcel>
+         <!--Optional:-->
+         <pick_up_date>2014-12-14</pick_up_date>
+         <promo_code>1234</promo_code>
+      </pub:ask_for_transport_with_promo_code>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Send Parcel Reference 2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CustomerRPCPublicServiceSoapBinding</con:interface><con:operation>follow_parcel_delivery</con:operation><con:request name="Send Parcel Reference 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Customer-Public-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pub="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <pub:follow_parcel_delivery><!--Optional:-->
+         <parcel_id>#1514569FPS123Z</parcel_id>
+      </pub:follow_parcel_delivery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Customer Transport" searchProperties="true" id="6d79b946-aab3-4bb2-b706-17e2fbe6913f"><con:settings/><con:testStep type="request" name="Ask For Quote"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CustomerRPCPublicServiceSoapBinding</con:interface><con:operation>ask_for_quote</con:operation><con:request name="Ask For Quote"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Customer-Public-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pub="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <pub:ask_for_quote><!--Optional:-->
+         <parcel>
+            <!--Optional:-->
+            <delivery_address>Address of Mary's son</delivery_address>
+            <!--Optional:-->
+            <parcel_dimensions>
+               <depth>4</depth>
+               <height>2</height>
+               <width>1</width>
+            </parcel_dimensions>
+            <!--Optional:-->
+            <parcelID>#124</parcelID>
+            <!--Optional:-->
+            <pick_up_address>Address of Mary</pick_up_address>
+            <parcel_weight>42</parcel_weight>
+         </parcel>
+         <!--Optional:-->
+         <pick_up_date>2014-10-9</pick_up_date>
+      </pub:ask_for_quote>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Ask for delivery"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CustomerRPCPublicServiceSoapBinding</con:interface><con:operation>ask_for_transport</con:operation><con:request name="Ask for delivery"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/Customer-Public-RPC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pub="http://informatique.polytech.unice.fr/soa1/FedPS/rpc/public">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <pub:ask_for_transport><!--Optional:-->
+         <parcel>
+            <!--Optional:-->
+            <delivery_address>Address of Mary's son</delivery_address>
+            <!--Optional:-->
+            <parcel_dimensions>
+               <depth>4</depth>
+               <height>2</height>
+               <width>1</width>
+            </parcel_dimensions>
+            <!--Optional:-->
+            <parcelID>#124</parcelID>
+            <!--Optional:-->
+            <pick_up_address>Address of Mary</pick_up_address>
+            <parcel_weight>42</parcel_weight>
+         </parcel>
+         <!--Optional:-->
+         <pick_up_date>2014-10-9</pick_up_date>
+      </pub:ask_for_transport>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

@@ -1,0 +1,10 @@
+							README TP SOA1 FEDPS BAGLIO MICHAEL: 
+
+
+	(i) Service Interface : J'utilise RPC , je voulais partir sur REST au début , mais j'ai manqué de temps pour et j'ai choisi RPC car c'est le seul que j'avais déjà pu survoler avant.
+	(ii) Business Object : Ce webservice tourne autour du sujet FedPS
+	(iii) Pour ce webservice , j'ai choisi de tourner autour de trois axes : Le client , le chauffeur et le manager . Car ils ont tous des actions qui leurs sont propres .
+		A la base , je ne souhaitais pas créer de classe contenant les données, mais au fil de l'avancement , je me suis rendu compte que ce serait plus que brouillon sans et que ça 			simplifiais bien des choses . Pour representer l'accès au status des colis , j'ai utilisé une hashmap . Je pensais faire une EnumMap mais je n'ai pas eu le temps modifier .
+
+
+(L'horloge tourne , je manque de temps pour décrire mes choix ) 

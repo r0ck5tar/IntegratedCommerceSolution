@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="TeamForce" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="TestSuite" value="ManagementServiceTestSuite"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Save Project" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="TestCase" value="CreateCatalogue"/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:8080</con:endpoint></con:endpoints><con:resource name="catalogues" path="/teamforce/public/catalogues"><con:settings/><con:parameters/><con:method name="catalogues" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/octet-stream</con:mediaType><con:status>200</con:status><con:params/><con:element>catalogues</con:element></con:representation><con:request name="list catalogues" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/teamforce/public/catalogues</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="catalogues_FALL14" path="/teamforce/public/catalogues/FALL14"><con:settings/><con:parameters/><con:method name="FALL14" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/octet-stream</con:mediaType><con:status>200</con:status><con:params/><con:element>products</con:element></con:representation><con:request name="view FALL14 catalogue" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/teamforce/public/catalogues/FALL14</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="orders" path="/teamforce/public/customers/1/orders"><con:settings/><con:parameters/><con:method name="Customer_1_order" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/octet-stream</con:mediaType><con:status>200</con:status><con:params/><con:element>orders</con:element></con:representation><con:request name="view orders" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/teamforce/public/customers/1/orders</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="Customer 1" path="/teamforce/public/customers/1/"><con:settings/><con:parameters/><con:method name="Method 1" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/octet-stream</con:mediaType><con:status>200</con:status><con:params/><con:element>customer</con:element></con:representation><con:request name="Request 1" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/teamforce/public/customers/1/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="suggestions" path="/teamforce/private/suggestions"><con:settings/><con:parameters/><con:method name="all suggestions" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/octet-stream</con:mediaType><con:status>200</con:status><con:params/><con:element>listofsuggestions</con:element></con:representation><con:request name="view all suggestions" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/teamforce/private/suggestions</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="ManagementServiceSoapBinding" type="wsdl" bindingName="{http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-management}ManagementServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080//webservices/management?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080//webservices/management?wsdl"><con:part><con:url>http://localhost:8080//webservices/management?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ManagementService" targetNamespace="http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-management" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-management" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-management" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="createcatalogue" type="tns:createcatalogue"/>
+      <xs:element name="createcatalogueResponse" type="tns:createcatalogueResponse"/>
+      <xs:complexType name="createcatalogue">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="catalogue" type="tns:catalogueInput"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="catalogueInput">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="products" type="tns:recommendedproduct"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="recommendedproduct">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string"/>
+          <xs:element name="price" type="xs:float"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createcatalogueResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="newcatalogue" type="tns:catalogueOutput"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="catalogueOutput">
+        <xs:sequence>
+          <xs:element name="link" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="createcatalogueResponse">
+    <wsdl:part element="tns:createcatalogueResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createcatalogue">
+    <wsdl:part element="tns:createcatalogue" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ManagementService">
+    <wsdl:operation name="createcatalogue">
+      <wsdl:input message="tns:createcatalogue" name="createcatalogue"></wsdl:input>
+      <wsdl:output message="tns:createcatalogueResponse" name="createcatalogueResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ManagementServiceSoapBinding" type="tns:ManagementService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="createcatalogue">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createcatalogue">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createcatalogueResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ManagementService">
+    <wsdl:port binding="tns:ManagementServiceSoapBinding" name="ManagementPort">
+      <soap:address location="http://localhost:8080/webservices/management"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/webservices/management</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="createcatalogue" bindingOperationName="createcatalogue" type="Request-Response" outputName="createcatalogueResponse" inputName="createcatalogue" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="createcatalogue"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/management/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:for="http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-management">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <for:createcatalogue>
+         <!--Optional:-->
+         <catalogue>
+            <name>FALL16</name>
+            <!--Zero or more repetitions:-->
+            <products>
+               <id>WXJJKDDLF</id>
+               <price>23.40</price>
+            </products>
+            <products>
+               <id>GHHDJJEK</id>
+               <price>5.30</price>
+            </products>
+
+         </catalogue>
+      </for:createcatalogue>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://informatique.polytech.unice.fr/soa1/binluqma/forceteam-management/ManagementService/createcatalogue"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="OrderServiceSoapBinding" type="wsdl" bindingName="{http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-management}OrderServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080//webservices/order?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080//webservices/order?wsdl"><con:part><con:url>http://localhost:8080//webservices/order?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="OrderService" targetNamespace="http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-management" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-management" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-order">
+  <wsdl:import location="http://localhost:8080/webservices/order?wsdl=OrderService.wsdl" namespace="http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-order"></wsdl:import>
+  <wsdl:binding name="OrderServiceSoapBinding" type="ns1:OrderService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="createorder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createorder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createorderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OrderService">
+    <wsdl:port binding="tns:OrderServiceSoapBinding" name="OrderPort">
+      <soap:address location="http://localhost:8080/webservices/order"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8080/webservices/order?wsdl=OrderService.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="OrderService" targetNamespace="http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-order" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-order">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-order" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-order">
+      <xs:element name="createorder" type="tns:createorder"/>
+      <xs:element name="createorderResponse" type="tns:createorderResponse"/>
+      <xs:complexType name="createorder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:orderInput"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderInput">
+        <xs:sequence>
+          <xs:element name="customerid" type="xs:int"/>
+          <xs:element maxOccurs="unbounded" name="product" type="tns:productOrder"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="productOrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="productid" type="xs:string"/>
+          <xs:element name="quantity" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createorderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderstatus" type="tns:orderresult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderresult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderstatus" type="tns:orderStatus"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="recommendations" type="tns:recommendedproduct"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="recommendedproduct">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string"/>
+          <xs:element name="price" type="xs:float"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="orderStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="ORDERED"/>
+          <xs:enumeration value="PAID"/>
+          <xs:enumeration value="PREPARATION"/>
+          <xs:enumeration value="SENT"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="createorderResponse">
+    <wsdl:part element="ns1:createorderResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createorder">
+    <wsdl:part element="ns1:createorder" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="OrderService">
+    <wsdl:operation name="createorder">
+      <wsdl:input message="ns1:createorder" name="createorder"></wsdl:input>
+      <wsdl:output message="ns1:createorderResponse" name="createorderResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/webservices/order</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="createorder" bindingOperationName="createorder" type="Request-Response" outputName="createorderResponse" inputName="createorder" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="createorder"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/order</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:team="http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-order">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <team:createorder>
+         <!--Optional:-->
+         <arg0>
+            <customerid>1</customerid>
+            <!--1 or more repetitions:-->
+            <product>
+               <!--Optional:-->
+               <productid>Q2D5NQ4RH99XV1G</productid>
+               <quantity>2</quantity>
+            </product>
+            <product>
+               <productid>E8C4YA3SA57FQ6A</productid>
+               <quantity>1</quantity>
+            </product>
+            <product>
+			<productid>N3J9TX2UB75TP7H</productid>
+               <quantity>3</quantity>
+            </product>
+         </arg0>
+      </team:createorder>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-management/OrderService/createorder"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="ManagementServiceTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CreateCatalogue" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="view existing catalogues"><con:settings/><con:config service="http://localhost:8080" resourcePath="/teamforce/public/catalogues" methodName="catalogues" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="view existing catalogues" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/teamforce/public/catalogues</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="count catalogues"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>nbCatalogues</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>view existing catalogues</con:sourceStep><con:sourcePath>count(//link)</con:sourcePath><con:targetType>nbCataloguesBefore</con:targetType><con:targetStep>#TestCase#</con:targetStep></con:transfers></con:config></con:testStep><con:testStep type="request" name="create catalogue"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ManagementServiceSoapBinding</con:interface><con:operation>createcatalogue</con:operation><con:request name="create catalogue"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/management</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:for="http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-management">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <for:createcatalogue>
+         <!--Optional:-->
+         <catalogue>
+            <name>FALL15</name>
+            <!--Zero or more repetitions:-->
+            <products>
+               <id>WXJJKDDLF</id>
+               <price>23.40</price>
+            </products>
+            <products>
+               <id>GHHDJJEK</id>
+               <price>5.30</price>
+            </products>
+
+         </catalogue>
+      </for:createcatalogue>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="restrequest" name="view catalogues"><con:settings/><con:config service="http://localhost:8080" resourcePath="/teamforce/public/catalogues" methodName="catalogues" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="view catalogues" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/teamforce/public/catalogues</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="count catalogues after"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>nbCatalogues</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>view catalogues</con:sourceStep><con:sourcePath>count(//link)</con:sourcePath><con:targetType>nbCataloguesAfter</con:targetType><con:targetStep>#TestCase#</con:targetStep></con:transfers></con:config></con:testStep><con:testStep type="groovy" name="check counter"><con:settings/><con:config><script>def before = testRunner.testCase.getPropertyValue("nbCataloguesBefore");
+def after  = testRunner.testCase.getPropertyValue("nbCataloguesAfter");  
+return after > before;</script></con:config></con:testStep><con:properties><con:property><con:name>nbCataloguesBefore</con:name><con:value>5</con:value></con:property><con:property><con:name>nbCataloguesAfter</con:name><con:value>5</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:testSuite name="CustomerUseCaseTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="OrderSomeProducts" searchProperties="true"><con:settings/><con:testStep type="properties" name="Properties"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>product1</con:name><con:value>E8C4YA3SA57FQ6A</con:value></con:property><con:property><con:name>product2</con:name><con:value>H8S6NF1RO86OT5E</con:value></con:property><con:property><con:name>beforeOrder</con:name><con:value/></con:property><con:property><con:name>afterOrder</con:name><con:value/></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="View order history"><con:settings/><con:config service="http://localhost:8080" resourcePath="/teamforce/public/customers/1/orders" methodName="Customer_1_order" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="View order history" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/teamforce/public/customers/1/orders</con:originalUri><con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes"><con:configuration><codes>200
+</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Browse catalogues"><con:settings/><con:config service="http://localhost:8080" resourcePath="/teamforce/public/catalogues" methodName="catalogues" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Browse catalogues" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/teamforce/public/catalogues</con:originalUri><con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Browse FALL14 catalogue"><con:settings/><con:config service="http://localhost:8080" resourcePath="/teamforce/public/catalogues/FALL14" methodName="FALL14" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Browse FALL14 catalogue" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/teamforce/public/catalogues/FALL14</con:originalUri><con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="selected products transfer"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false" entitize="false" ignoreEmpty="false" useXQuery="false" transferChildNodes="false"><con:name>product1</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Browse FALL14 catalogue</con:sourceStep><con:sourcePath>products/product[5]/id</con:sourcePath><con:targetType>product1</con:targetType><con:targetStep>Properties</con:targetStep></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>product2</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Browse FALL14 catalogue</con:sourceStep><con:sourcePath>products/product[2]/id</con:sourcePath><con:targetType>product2</con:targetType><con:targetStep>Properties</con:targetStep></con:transfers></con:config></con:testStep><con:testStep type="request" name="Order two products"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>OrderServiceSoapBinding</con:interface><con:operation>createorder</con:operation><con:request name="Order two products"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservices/order</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:team="http://informatique.polytech.unice.fr/soa1/binluqma/teamforce-order">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <team:createorder>
+         <!--Optional:-->
+         <arg0>
+            <customerid>1</customerid>
+            <!--1 or more repetitions:-->
+            <product>
+               <!--Optional:-->
+               <productid>${#product1}</productid>
+               <quantity>2</quantity>
+            </product>
+            <product>
+               <productid>${#product2}</productid>
+               <quantity>1</quantity>
+            </product>
+         </arg0>
+      </team:createorder>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Simple Contains" name="Contains recommendations"><con:configuration><token>(?s).*recommendations.*</token><ignoreCase>false</ignoreCase><useRegEx>true</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="restrequest" name="View order history after order"><con:settings/><con:config service="http://localhost:8080" resourcePath="/teamforce/public/customers/1/orders" methodName="Customer_1_order" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="View order history after order" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/teamforce/public/customers/1/orders</con:originalUri><con:assertion type="Simple Contains" name="Contains"><con:configuration><token>order</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>orders/order[2]/product[1]/id</path><content>${#product2}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" name="XPath Match 1"><con:configuration><path>orders/order[2]/product[2]/id</path><content>${#product1}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>product1</con:name><con:value>Q2D5NQ4RH99XV1G</con:value></con:property><con:property><con:name>product2</con:name><con:value>H8S6NF1RO86OT5E</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:testSuite name="EmployeeTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GenerateProductSuggestions" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="http://localhost:8080/teamforce/private/suggestions"><con:settings/><con:config service="http://localhost:8080" resourcePath="/teamforce/private/suggestions" methodName="all suggestions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="http://localhost:8080/teamforce/private/suggestions" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/teamforce/private/suggestions</con:originalUri><con:assertion type="Simple Contains" name="Contains suggestions"><con:configuration><token>(?s).*suggestedproducts.*</token><ignoreCase>false</ignoreCase><useRegEx>true</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Check customer order details" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="consult customer details"><con:settings/><con:config service="http://localhost:8080" resourcePath="/teamforce/public/customers/1/" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="consult customer details" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/teamforce/public/customers/1/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="count addresses"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>nbAddress</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>consult customer details</con:sourceStep><con:sourcePath>count(//address)</con:sourcePath><con:targetType>nbAddresses</con:targetType><con:targetStep>#TestSuite#</con:targetStep></con:transfers></con:config></con:testStep><con:testStep type="transfer" name="count orders"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>nbOrders</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>consult customer details</con:sourceStep><con:sourcePath>count(//order)</con:sourcePath><con:targetType>nbOrders</con:targetType><con:targetStep>#TestSuite#</con:targetStep></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="check order"><con:settings/><con:config service="http://localhost:8080" resourcePath="/teamforce/public/customers/1/orders" methodName="Customer_1_order" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="check order" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/teamforce/public/customers/1/orders</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>nbOrders</con:name><con:value>2</con:value></con:property><con:property><con:name>nbAddresses</con:name><con:value>3</con:value></con:property></con:properties></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
