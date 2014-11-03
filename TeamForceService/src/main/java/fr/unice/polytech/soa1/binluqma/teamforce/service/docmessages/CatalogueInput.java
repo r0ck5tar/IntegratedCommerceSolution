@@ -10,7 +10,7 @@ import java.util.List;
 @XmlType
 public class CatalogueInput{
     private String name;
-    private List<RecommendedProductInfo> products;
+    private List<CatalogueProductInfo> products;
 
     public CatalogueInput() {}
 
@@ -19,6 +19,6 @@ public class CatalogueInput{
     public void setName(String name) { this.name = name; }
 
     @XmlElement(name = "products", required = false)
-    public List<RecommendedProductInfo> getProducts() { return products; }
-    public void setProducts(List<RecommendedProductInfo> products) { this.products = products; }
+    public List<CatalogueProductInfo> getProducts() { return products; }
+    public void setProducts(List<CatalogueProductInfo> products) { this.products = products; }
 }

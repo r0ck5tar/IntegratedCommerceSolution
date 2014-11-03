@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="FedPSService:war">
+    <output-path>$PROJECT_DIR$/FedPSService/target</output-path>
+    <root id="archive" name="FedPSService-1.0.war">
+      <element id="artifact" artifact-name="FedPSService:war exploded" />
+    </root>
+  </artifact>
+</component>

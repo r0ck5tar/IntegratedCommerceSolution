@@ -25,7 +25,7 @@ public class ManagementServiceImpl implements ManagementService {
         String name = input.getName();
         Catalogue catalogue = new Catalogue(name);
         Product product = null;
-        for (RecommendedProductInfo p: input.getProducts()) {
+        for (CatalogueProductInfo p: input.getProducts()) {
             if (!catalogues.getAllProducts().containsKey(p.getId())) {
                 product = new Product(p.getId(), p.getPrice());
                 catalogues.getAllProducts().put(p.getId(), product);

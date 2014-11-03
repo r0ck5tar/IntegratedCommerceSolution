@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="TeamForceWebService:war exploded">
+    <output-path>$PROJECT_DIR$/TeamForceService/target/TeamForceWebService-1.0</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="TeamForceWebService/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="TeamForceWebService" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

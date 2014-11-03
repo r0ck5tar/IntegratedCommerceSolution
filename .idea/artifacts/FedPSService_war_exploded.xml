@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="FedPSService:war exploded">
+    <output-path>$PROJECT_DIR$/FedPSService/target/FedPSService-1.0</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="FedPSService/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="FedPSService" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

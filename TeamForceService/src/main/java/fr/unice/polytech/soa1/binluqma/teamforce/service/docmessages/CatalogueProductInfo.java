@@ -3,11 +3,12 @@ package fr.unice.polytech.soa1.binluqma.teamforce.service.docmessages;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-/**
- * Created by Hakim on 07/10/14.
+/*
+    For creating orders
  */
+
 @XmlType(name = "recommendedproduct")
-public class RecommendedProductInfo {
+public class CatalogueProductInfo {
     private String id;
     private float price;
 
