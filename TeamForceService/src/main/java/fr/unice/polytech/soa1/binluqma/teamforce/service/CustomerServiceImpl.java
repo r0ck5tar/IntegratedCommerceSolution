@@ -37,7 +37,7 @@ public class CustomerServiceImpl implements CustomerService {
 
         if(orderIDs != null) {
             for(int i: orderIDs) {
-                listOfOrders.getOrders().add(uri.getBaseUri().toString() + "teamforce/public/customers" + id + "/orders/" + i);
+                listOfOrders.getOrders().add(uri.getBaseUri().toString() + "teamforce/customers" + id + "/orders/" + i);
             }
         }
 
@@ -92,10 +92,10 @@ public class CustomerServiceImpl implements CustomerService {
     public Response viewCatalogue(String edition) {
         ListOfProducts result = new ListOfProducts();
 
-        for (Category c: catalogues.getCatalogues().get(edition).getCategories()) {
+        for (Category c: catalogues.getCatalogues().get(edition).getCategories().values()) {
             for(Product p: c.getProducts()) {
                 ProductInfo productInfo = new ProductInfo(p.getId(), p.getPrice());
-                productInfo.setLink(uri.getBaseUri().toString() + "teamforce/public/products/" + p.getId());
+                productInfo.setLink(uri.getBaseUri().toString() + "teamforce/products/" + p.getId());
                 result.getProducts().add(productInfo);
             }
         }
@@ -108,7 +108,7 @@ public class CustomerServiceImpl implements CustomerService {
 
         for(Product p: catalogues.getAllProducts().values()) {
             ProductInfo productInfo = new ProductInfo(p.getId(), p.getPrice());
-            productInfo.setLink(uri.getBaseUri().toString() + "teamforce/public/products/" + p.getId());
+            productInfo.setLink(uri.getBaseUri().toString() + "teamforce/products/" + p.getId());
             result.getProducts().add(productInfo);
         }
 
