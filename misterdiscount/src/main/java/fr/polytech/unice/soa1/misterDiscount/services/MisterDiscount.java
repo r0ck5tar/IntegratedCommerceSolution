@@ -17,6 +17,6 @@ public interface MisterDiscount {
 
     @WebMethod(operationName = "takingOrder")
     @WebResult(name = "receiptObject")
-    public Receipt takingOrder(@WebParam(name="OrderMinimal") Order orderMinimal);
+    public Receipt takingOrder(@WebParam(name="OrderMinimal") Order order);
 
 }

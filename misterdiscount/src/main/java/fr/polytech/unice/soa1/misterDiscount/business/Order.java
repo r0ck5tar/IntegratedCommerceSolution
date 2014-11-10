@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlType;
 public class Order {
 	private String orderId;
 	private String itemId;
-	private String customerName;
+	private int customerId;
 	private int quantity;
 	private Date orderDate;
 	private Date deliveryDate;
@@ -23,11 +23,11 @@ public class Order {
 	}
 	
 	@XmlElement(name = "customerName")
-	public String getCustomerName() {
-		return customerName;
+	public int getCustomerName() {
+		return customerId;
 	}
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
+	public void setCustomerName(int customerName) {
+		this.customerId = customerName;
 	}
 	
 	@XmlElement(name = "quantity")

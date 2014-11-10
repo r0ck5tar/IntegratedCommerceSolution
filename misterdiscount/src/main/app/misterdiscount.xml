@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <mule xmlns:vm="http://www.mulesoft.org/schema/mule/vm" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:cxf="http://www.mulesoft.org/schema/mule/cxf" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
-	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.5.1"
+	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.5.2"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
@@ -10,21 +10,17 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
 http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/current/mule-vm.xsd">
     <flow name="misterdiscountFlow1" doc:name="misterdiscountFlow1">
-        <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="8081" doc:name="HTTP"/>
-        <cxf:jaxws-service doc:name="MisterDiscount"/>
-        <set-variable doc:name="Operation" value="#[flowVars.cxf_operation.localPart]" variableName="operation"/>
+        <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="8081" doc:name="HTTP" path="md/"/>
+        <cxf:jaxws-service doc:name="MisterDiscount" serviceClass="fr.polytech.unice.soa1.misterDiscount.services.MisterDiscount"/>
+        <set-variable variableName="operation" value="#[flowVars.cxf_operation.localPart]" doc:name="Operation"/>
         <choice doc:name="Choice">
-            <when expression="">
-                <logger level="INFO" doc:name="Create command " message="create command"/>
-                <vm:outbound-endpoint exchange-pattern="one-way" path="/misterDiscount/createCommand" doc:name="createCommand"/>
+            <when expression="#[operation == &quot;takingOrder&quot;]">
+                <flow-ref name="invoke_taking_order" doc:name="invoke taking order"/>
             </when>
-            <otherwise>
-                <logger level="INFO" doc:name="Logger"/>
-            </otherwise>
         </choice>
     </flow>
-    <flow name="misterdiscountFlow2" doc:name="misterdiscountFlow2">
-        <vm:inbound-endpoint exchange-pattern="one-way" path="/misterDiscount/createCommand" doc:name="createCommand"/>
+    <flow name="invoke_taking_order" doc:name="invoke_taking_order">
+        <set-variable variableName="Order" value="#[payload]" doc:name="Variable"/>
         <logger level="INFO" doc:name="Logger"/>
     </flow>
 </mule>
