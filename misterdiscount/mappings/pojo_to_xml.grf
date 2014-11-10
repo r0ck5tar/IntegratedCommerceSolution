@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph __version="3.5.0" author="user" created="Mon Nov 10 22:42:46 CET 2014" description="Pojo To XML" guiVersion="3.4.4.P" id="1415655922912" licenseCode="Unlicensed" licenseType="Unknown" modified="Mon Nov 10 22:42:46 CET 2014" modifiedBy="user" name="Pojo_To_XML" revision="1.0" showComponentDetails="false">
+<Global>
+<Metadata __filteredMetadata="false" __index="0" __referenceCounter="1" __schemaType="{http://wadl.dev.java.net/2009/02}applicationType" __sourcePath="{http://wadl.dev.java.net/2009/02=ns0}/ns0:application" _dataStructure="OBJECT" _id="__id" _type="Output" id="8a94685b-dcd9-49e0-b083-749ba5c5a3dd">
+<Record fieldDelimiter="," name="application" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="11" __schemaType="{http://www.w3.org/2001/XMLSchema}schemaType" __sourcePath="{http://www.w3.org/2001/XMLSchema=ns1,http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:grammars/ns1:schema/@attributeFormDefault" containerType="SINGLE" label="attributeFormDefault" name="attributeFormDefault" type="string"/>
+<Field __index="12" __schemaType="{http://www.w3.org/2001/XMLSchema}schemaType" __sourcePath="{http://www.w3.org/2001/XMLSchema=ns1,http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:grammars/ns1:schema/@elementFormDefault" containerType="SINGLE" label="elementFormDefault" name="elementFormDefault" type="string"/>
+<Field __index="22" __schemaType="{http://wadl.dev.java.net/2009/02}resourceType" __sourcePath="{http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:resources/ns0:resource/@path" containerType="SINGLE" label="path" name="path" type="string"/>
+<Field __index="23" __schemaType="{http://wadl.dev.java.net/2009/02}resourcesType" __sourcePath="{http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:resources/@base" containerType="SINGLE" label="base" name="base" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="5" __referenceCounter="0" __schemaType="{http://www.w3.org/2001/XMLSchema}complexTypeType" __sourcePath="{http://www.w3.org/2001/XMLSchema=ns1,http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:grammars/ns1:schema/ns1:complexType" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="8a94685b-dcd9-49e0-b083-749ba5c5a3dd" _parent_id="__parent_id" _type="Output" id="5c40e9ec-4ac9-4ef6-99cc-cb08bc5579b1">
+<Record fieldDelimiter="," name="complexType" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="10" __schemaType="{http://www.w3.org/2001/XMLSchema}complexTypeType" __sourcePath="{http://www.w3.org/2001/XMLSchema=ns1,http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:grammars/ns1:schema/ns1:complexType/@name" containerType="SINGLE" label="name" name="name" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="0" __schemaType="{http://www.w3.org/2001/XMLSchema}elementType" __sourcePath="{http://www.w3.org/2001/XMLSchema=ns1,http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:grammars/ns1:schema/ns1:element" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="8a94685b-dcd9-49e0-b083-749ba5c5a3dd" _parent_id="__parent_id" _type="Output" id="b8aa97ad-809a-48a4-b73f-d54d2e8e1919">
+<Record fieldDelimiter="," name="element" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="0" __schemaType="{http://www.w3.org/2001/XMLSchema}elementType" __sourcePath="{http://www.w3.org/2001/XMLSchema=ns1,http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:grammars/ns1:schema/ns1:element/@name" containerType="SINGLE" label="name" name="name" type="string"/>
+<Field __index="1" __schemaType="{http://www.w3.org/2001/XMLSchema}elementType" __sourcePath="{http://www.w3.org/2001/XMLSchema=ns1,http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:grammars/ns1:schema/ns1:element/@type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="2" __schemaType="{http://www.w3.org/2001/XMLSchema}elementType" __sourcePath="{http://www.w3.org/2001/XMLSchema=ns1,http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:grammars/ns1:schema/ns1:element/@maxOccurs" containerType="SINGLE" label="maxOccurs" name="maxOccurs" type="string"/>
+<Field __index="3" __schemaType="{http://www.w3.org/2001/XMLSchema}elementType" __sourcePath="{http://www.w3.org/2001/XMLSchema=ns1,http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:grammars/ns1:schema/ns1:element/@minOccurs" containerType="SINGLE" label="minOccurs" name="minOccurs" type="integer"/>
+<Field __index="4" __schemaType="{http://www.w3.org/2001/XMLSchema}elementType" __sourcePath="{http://www.w3.org/2001/XMLSchema=ns1,http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:grammars/ns1:schema/ns1:element/@text()" containerType="SINGLE" label="text()" name="text" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="5" __referenceCounter="0" __schemaType="{http://www.w3.org/2001/XMLSchema}elementType" __sourcePath="{http://www.w3.org/2001/XMLSchema=ns1,http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:grammars/ns1:schema/ns1:complexType/ns1:sequence/ns1:element" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="5c40e9ec-4ac9-4ef6-99cc-cb08bc5579b1" _parent_id="__parent_id" _type="Output" id="651d797b-0b05-44ce-9287-c53296d89f7f">
+<Record fieldDelimiter="," name="element" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="5" __schemaType="{http://www.w3.org/2001/XMLSchema}elementType" __sourcePath="{http://www.w3.org/2001/XMLSchema=ns1,http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:grammars/ns1:schema/ns1:complexType/ns1:sequence/ns1:element/@name" containerType="SINGLE" label="name" name="name" type="string"/>
+<Field __index="6" __schemaType="{http://www.w3.org/2001/XMLSchema}elementType" __sourcePath="{http://www.w3.org/2001/XMLSchema=ns1,http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:grammars/ns1:schema/ns1:complexType/ns1:sequence/ns1:element/@type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="7" __schemaType="{http://www.w3.org/2001/XMLSchema}elementType" __sourcePath="{http://www.w3.org/2001/XMLSchema=ns1,http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:grammars/ns1:schema/ns1:complexType/ns1:sequence/ns1:element/@maxOccurs" containerType="SINGLE" label="maxOccurs" name="maxOccurs" type="string"/>
+<Field __index="8" __schemaType="{http://www.w3.org/2001/XMLSchema}elementType" __sourcePath="{http://www.w3.org/2001/XMLSchema=ns1,http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:grammars/ns1:schema/ns1:complexType/ns1:sequence/ns1:element/@minOccurs" containerType="SINGLE" label="minOccurs" name="minOccurs" type="integer"/>
+<Field __index="9" __schemaType="{http://www.w3.org/2001/XMLSchema}elementType" __sourcePath="{http://www.w3.org/2001/XMLSchema=ns1,http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:grammars/ns1:schema/ns1:complexType/ns1:sequence/ns1:element/@text()" containerType="SINGLE" label="text()" name="text" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="1" __referenceCounter="0" __sourcePath="{}/object/itemquantity" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="7c645bbd-8355-4dbf-861b-a55609e7f8ba" _parent_id="__parent_id" _type="Input" id="2d6b79ed-08f5-4bd2-a578-5901f4557367">
+<Record fieldDelimiter="," name="itemquantity" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="1" __sourcePath="{}/object/itemquantity/productId" containerType="SINGLE" label="productId" name="productId" type="string"/>
+<Field __index="2" __sourcePath="{}/object/itemquantity/quantity" containerType="SINGLE" label="quantity" name="quantity" type="integer"/>
+</Record>
+</Metadata>
+<Metadata __index="17" __referenceCounter="0" __schemaType="{http://wadl.dev.java.net/2009/02}methodType" __sourcePath="{http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:resources/ns0:resource/ns0:method" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="8a94685b-dcd9-49e0-b083-749ba5c5a3dd" _parent_id="__parent_id" _type="Output" id="d157fb06-8328-4505-9bbf-5b537921161a">
+<Record fieldDelimiter="," name="method" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="17" __schemaType="{http://wadl.dev.java.net/2009/02}representationType" __sourcePath="{http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:resources/ns0:resource/ns0:method/ns0:request/ns0:representation/@mediaType" containerType="SINGLE" label="mediaType" name="mediaType" type="string"/>
+<Field __index="18" __schemaType="{http://wadl.dev.java.net/2009/02}representationType" __sourcePath="{http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:resources/ns0:resource/ns0:method/ns0:request/ns0:representation/@text()" containerType="SINGLE" label="text()" name="text" type="string"/>
+<Field __index="19" __schemaType="{http://wadl.dev.java.net/2009/02}representationType" __sourcePath="{http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:resources/ns0:resource/ns0:method/ns0:response/ns0:representation/@mediaType" containerType="SINGLE" label="mediaType" name="mediaType_1" type="string"/>
+<Field __index="20" __schemaType="{http://wadl.dev.java.net/2009/02}representationType" __sourcePath="{http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:resources/ns0:resource/ns0:method/ns0:response/ns0:representation/@text()" containerType="SINGLE" label="text()" name="text_1" type="string"/>
+<Field __index="21" __schemaType="{http://wadl.dev.java.net/2009/02}methodType" __sourcePath="{http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:resources/ns0:resource/ns0:method/@name" containerType="SINGLE" label="name" name="name" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="13" __referenceCounter="0" __schemaType="{http://wadl.dev.java.net/2009/02}paramType" __sourcePath="{http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:resources/ns0:resource/ns0:param" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="8a94685b-dcd9-49e0-b083-749ba5c5a3dd" _parent_id="__parent_id" _type="Output" id="c7c55bcb-b29c-4613-bc5f-f5b41fe4db9e">
+<Record fieldDelimiter="," name="param" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="13" __schemaType="{http://wadl.dev.java.net/2009/02}paramType" __sourcePath="{http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:resources/ns0:resource/ns0:param/@name" containerType="SINGLE" label="name" name="name" type="string"/>
+<Field __index="14" __schemaType="{http://wadl.dev.java.net/2009/02}paramType" __sourcePath="{http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:resources/ns0:resource/ns0:param/@style" containerType="SINGLE" label="style" name="style" type="string"/>
+<Field __index="15" __schemaType="{http://wadl.dev.java.net/2009/02}paramType" __sourcePath="{http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:resources/ns0:resource/ns0:param/@type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="16" __schemaType="{http://wadl.dev.java.net/2009/02}paramType" __sourcePath="{http://wadl.dev.java.net/2009/02=ns0}/ns0:application/ns0:resources/ns0:resource/ns0:param/@text()" containerType="SINGLE" label="text()" name="text" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/object" _dataStructure="OBJECT" _id="__id" _type="Input" id="7c645bbd-8355-4dbf-861b-a55609e7f8ba">
+<Record fieldDelimiter="," name="SimpleOrder" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="0" __sourcePath="{}/object/custormerId" containerType="SINGLE" label="custormerId" name="custormerId" type="string"/>
+</Record>
+</Metadata>
+<Dictionary>
+<Entry id="DictionaryEntry0" input="true" name="inputPayload" output="false" type="object"/>
+<Entry id="DictionaryEntry1" input="false" name="outputPayload" output="true" type="object"/>
+</Dictionary>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" fileURL="dict:inputPayload" guiName="Pojo READER" guiX="20" guiY="20" id="BEAN_READER0" type="BEAN_READER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context outPort="0" sequenceField="__id" xpath=".">
+  <Mapping cloverField="custormerId" trim="true" xpath="custormerId"/>
+</Context>
+]]></attr>
+<attr name="_data_format"><![CDATA[JAVA]]></attr>
+<attr name="schema"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><schema-object>
+  <typed-object-ref type-ref="fr.polytech.unice.soa1.misterDiscount.business.SimpleOrder"/>
+  <typed-object type="fr.polytech.unice.soa1.misterDiscount.business.SimpleOrder">
+    <typed-object-ref name="custormerId" type-ref="java.lang.String"/>
+    <schema-collection name="itemquantity" type="java.util.List">
+      <typed-object-ref type-ref="fr.polytech.unice.soa1.misterDiscount.business.ItemQuantity"/>
+    </schema-collection>
+  </typed-object>
+  <typed-object type="fr.polytech.unice.soa1.misterDiscount.business.ItemQuantity">
+    <typed-object-ref name="productId" type-ref="java.lang.String"/>
+    <typed-object-ref name="quantity" type-ref="int"/>
+  </typed-object>
+  <typed-object type="java.lang.String"/>
+  <typed-object type="int"/>
+</schema-object>
+]]></attr>
+</Node>
+<Node cacheInMemory="true" charset="UTF-8" enabled="enabled" fileURL="dict:outputPayload" guiName="XML WRITER" guiX="900" guiY="20" id="EXT_XML_WRITER0" type="EXT_XML_WRITER" xmlSchemaURL="./src/test/resources/application.xsd,C:/Users/user/Documents/Work SI5/SOA/IntegratedCommerceSolution/misterdiscount/src/test/resources/schema.xsd">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<clover:element clover:name="ns0:application" xmlns:clover="http://www.cloveretl.com/ns/xmlmapping" xmlns:ns0="http://wadl.dev.java.net/2009/02" clover:inPort="0">
+  <clover:element clover:name="ns0:grammars">
+    <clover:element clover:name="ns1:schema" xmlns:ns1="http://www.w3.org/2001/XMLSchema" elementFormDefault="$0.elementFormDefault" attributeFormDefault="$0.attributeFormDefault"/>
+  </clover:element>
+  <clover:element clover:name="ns0:resources" base="$0.base">
+    <clover:element clover:name="ns0:resource" path="$0.path"/>
+  </clover:element>
+</clover:element>]]></attr>
+<attr name="_data_format"><![CDATA[XML]]></attr>
+<attr name="__rootGlobalElementName"><![CDATA[{http://wadl.dev.java.net/2009/02}application]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Foreach 'object' -&gt; 'ns0:application'" guiX="460" guiY="20" id="FOREACH_OBJECT_NS0_APPLICATION" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = input.__id;
+//END -> DO NOT REMOVE
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="BEAN_READER0:0" guiBendpoints="" id="Edge0" inPort="Port 0 (in)" metadata="7c645bbd-8355-4dbf-861b-a55609e7f8ba" outPort="Port 0 (out)" toNode="FOREACH_OBJECT_NS0_APPLICATION:0"/>
+<Edge debugMode="true" fromNode="FOREACH_OBJECT_NS0_APPLICATION:0" guiBendpoints="" id="Edge1" inPort="Port 0 (in)" metadata="8a94685b-dcd9-49e0-b083-749ba5c5a3dd" outPort="Port 0 (out)" toNode="EXT_XML_WRITER0:0"/>
+</Phase>
+</Graph>

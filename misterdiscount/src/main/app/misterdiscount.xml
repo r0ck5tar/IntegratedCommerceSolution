@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:vm="http://www.mulesoft.org/schema/mule/vm" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:cxf="http://www.mulesoft.org/schema/mule/cxf" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+<mule xmlns:data-mapper="http://www.mulesoft.org/schema/mule/ee/data-mapper" xmlns:vm="http://www.mulesoft.org/schema/mule/vm" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:cxf="http://www.mulesoft.org/schema/mule/cxf" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.5.2"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
@@ -8,19 +8,28 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
 http://www.mulesoft.org/schema/mule/cxf http://www.mulesoft.org/schema/mule/cxf/current/mule-cxf.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
 http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
-http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/current/mule-vm.xsd">
+http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/current/mule-vm.xsd
+http://www.mulesoft.org/schema/mule/ee/data-mapper http://www.mulesoft.org/schema/mule/ee/data-mapper/current/mule-data-mapper.xsd">
+    <data-mapper:config name="Pojo_To_XML" transformationGraphPath="pojo_to_xml.grf" doc:name="Pojo_To_XML"/>
     <flow name="misterdiscountFlow1" doc:name="misterdiscountFlow1">
         <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="8081" doc:name="HTTP" path="md/"/>
         <cxf:jaxws-service doc:name="MisterDiscount" serviceClass="fr.polytech.unice.soa1.misterDiscount.services.MisterDiscount"/>
         <set-variable variableName="operation" value="#[flowVars.cxf_operation.localPart]" doc:name="Operation"/>
         <choice doc:name="Choice">
             <when expression="#[operation == &quot;takingOrder&quot;]">
-                <flow-ref name="invoke_taking_order" doc:name="invoke taking order"/>
+                <logger message="createOrder" level="INFO" doc:name="createOrder"/>
+                <set-variable variableName="simpleOrder" value="#[payload]" doc:name="Variable"/>
+                <vm:outbound-endpoint exchange-pattern="one-way" path="misterDiscount/takingOrder" doc:name="misterDiscount/takingOrder"/>
             </when>
+            <otherwise>
+                <logger message="default" level="INFO" doc:name="default"/>
+            </otherwise>
         </choice>
     </flow>
-    <flow name="invoke_taking_order" doc:name="invoke_taking_order">
-        <set-variable variableName="Order" value="#[payload]" doc:name="Variable"/>
-        <logger level="INFO" doc:name="Logger"/>
+    <flow name="misterdiscountFlow2" doc:name="misterdiscountFlow2">
+        <vm:inbound-endpoint exchange-pattern="one-way" path="misterDiscount/takingOrder" doc:name="misterDiscount/takingOrder"/>
+        <set-session-variable variableName="simpleOrder" value="#[message.payload]" doc:name="simpleOrder"/>
+        <logger message="#[sessionVars.simpleOrder] " level="INFO" doc:name="order"/>
+        <data-mapper:transform doc:name="Pojo To XML" config-ref="Pojo_To_XML"/>
     </flow>
 </mule>
