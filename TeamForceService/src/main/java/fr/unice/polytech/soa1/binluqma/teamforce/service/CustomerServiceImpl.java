@@ -154,15 +154,14 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Response createOrder(OrderInput input) {
-        int customerId = input.getCustomerId();
-
+    public Response createOrder(Integer id, OrderInput input) {
+        /*
         Order order = new Order();
         order.setOrderId(orders.getOrders().size()+1);
         order.setStatus(OrderStatus.ORDERED);
 
-        if(addresses.getAddressesByCustomerId(input.getCustomerId()) != null) {
-            Address deliveryAddress = addresses.getAddressesByCustomerId(input.getCustomerId()).get(0);
+        if(addresses.getAddressesByCustomerId(id) != null) {
+            Address deliveryAddress = addresses.getAddressesByCustomerId(id).get(0);
             order.setDeliveryAddress(deliveryAddress);
         }
 
@@ -175,16 +174,17 @@ public class CustomerServiceImpl implements CustomerService {
         }
 
         orders.getOrders().put(order.getOrderId(), order);
-        if (orders.getCustomersToOrders().containsKey(customerId)) {
-            orders.getCustomersToOrders().get(customerId).add(order.getOrderId());
+        if (orders.getCustomersToOrders().containsKey(id)) {
+            orders.getCustomersToOrders().get(id).add(order.getOrderId());
         }
         else {
             List<Integer> orderList = new ArrayList<>();
             orderList.add(order.getOrderId());
-            orders.getCustomersToOrders().put(customerId, orderList);
+            orders.getCustomersToOrders().put(id, orderList);
         }
-
+        */
         OrderOutput result = new OrderOutput();
+        /*
         int totalProducts = catalogues.getAllProducts().size();
         for (int i = 0; i <3;  i++) {
             RecommendedProductInfo productInfo = new RecommendedProductInfo();
@@ -194,7 +194,8 @@ public class CustomerServiceImpl implements CustomerService {
             productInfo.setPrice(product.getPrice());
             result.getRecommendedProducts().add(productInfo);
         }
-
+        */
+        result.setOrderStatus(OrderStatus.ORDERED);
         return Response.ok(result).build();
     }
 

@@ -5,8 +5,8 @@ import javax.jws.WebParam;
 import javax.jws.WebResult;
 import javax.jws.WebService;
 
-import fr.polytech.unice.soa1.misterDiscount.business.Order;
 import fr.polytech.unice.soa1.misterDiscount.business.Receipt;
+import fr.polytech.unice.soa1.misterDiscount.business.SimpleOrder;
 
 
 
@@ -17,6 +17,6 @@ public interface MisterDiscount {
 
     @WebMethod(operationName = "takingOrder")
     @WebResult(name = "receiptObject")
-    public Receipt takingOrder(@WebParam(name="OrderMinimal") Order order);
+    public Receipt takingOrder(@WebParam(name="OrderMinimal") SimpleOrder order);
 
 }

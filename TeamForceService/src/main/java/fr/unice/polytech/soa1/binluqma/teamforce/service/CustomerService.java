@@ -51,7 +51,7 @@ public interface CustomerService {
 
     @Path("/customers/{id}/orders")
     @POST
-    public Response createOrder(OrderInput orderInput);
+    public Response createOrder(@PathParam("id") Integer id, @QueryParam("products_order")OrderInput orderInput);
 
     @Path("/customers/{id}/orders/{orderid}")
     @GET
@@ -371,20 +371,15 @@ class SuggestedProducts {
     For creating orders
  */
 
-@XmlRootElement
+@XmlRootElement(name = "products")
 class OrderInput {
-    private int customerId;
     private List<ProductOrder> productOrders;
 
     public OrderInput() {
         productOrders = new ArrayList<>();
     }
 
-    @XmlElement(name = "customerid", required = true)
-    public int getCustomerId() { return customerId; }
-    public void setCustomerId(int customerId) { this.customerId = customerId; }
-
-    @XmlElement(name = "product", required = true)
+    @XmlElement(name = "product")
     public List<ProductOrder> getProductOrders() { return productOrders; }
     public void setProductOrders(List<ProductOrder> productOrders) { this.productOrders = productOrders; }
 }
@@ -412,7 +407,7 @@ class ProductOrder {
     private String id;
     private int quantity;
 
-    @XmlElement(name = "productid")
+    @XmlElement(name = "product_id")
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
 
