@@ -13,6 +13,7 @@ http://www.mulesoft.org/schema/mule/ee/data-mapper http://www.mulesoft.org/schem
 http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd
 http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/current/mule-scripting.xsd">
     <data-mapper:config name="Pojo_To_XML" transformationGraphPath="pojo_to_xml.grf" doc:name="Pojo_To_XML"/>
+    <data-mapper:config name="XML_To_Pojo" transformationGraphPath="xml_to_pojo.grf" doc:name="XML_To_Pojo"/>
     <flow name="misterdiscountFlow1" doc:name="misterdiscountFlow1">
         <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="8081" doc:name="HTTP" path="md"/>
         <cxf:jaxws-service doc:name="MisterDiscount" serviceClass="fr.polytech.unice.soa1.misterDiscount.services.MisterDiscount"/>
@@ -43,6 +44,7 @@ return result;]]></scripting:script>
         <logger message="#[sessionVars.simpleOrder] " level="INFO" doc:name="order"/>
         <data-mapper:transform config-ref="Pojo_To_XML" input-ref="#[sessionVars[&quot;simpleOrder&quot;]]" doc:name="Pojo To XML"/>
         <http:outbound-endpoint exchange-pattern="request-response" host="localhost" port="8080" path="tf/teamforce/customers/1/order" method="POST" doc:name="HTTP"/>
+        <data-mapper:transform config-ref="XML_To_Pojo" doc:name="XML To Pojo"/>
         <logger message="hello" level="INFO" doc:name="Logger"/>
     </flow>
 </mule>
