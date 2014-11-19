@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph __version="3.5.0" author="Hakim" created="Tue Nov 18 20:45:08 CET 2014" description="Pojo To XML" guiVersion="3.4.4.P" id="1416341944595" licenseCode="Unlicensed" licenseType="Unknown" modified="Tue Nov 18 20:45:08 CET 2014" modifiedBy="Hakim" name="Pojo_To_XML_1" revision="1.0" showComponentDetails="false">
+<Global>
+<Metadata __index="1" __referenceCounter="0" __sourcePath="{}/object/itemquantity" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="318864d7-248a-4fd5-972c-ddc2d944d4c5" _parent_id="__parent_id" _type="Input" id="092267eb-13bd-4dfe-a1a7-ec31046f87e0">
+<Record fieldDelimiter="," name="itemquantity" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="1" __sourcePath="{}/object/itemquantity/productId" containerType="SINGLE" label="productId" name="productId" type="string"/>
+<Field __index="2" __sourcePath="{}/object/itemquantity/quantity" containerType="SINGLE" label="quantity" name="quantity" type="integer"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/object" _dataStructure="OBJECT" _id="__id" _type="Output" id="3e909a6b-e491-4951-ba6f-fe057a979fbb">
+<Record fieldDelimiter="," name="object" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="0" __sourcePath="{}/object/custormerId" containerType="SINGLE" label="custormerId" name="custormerId" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/object" _dataStructure="OBJECT" _id="__id" _type="Input" id="318864d7-248a-4fd5-972c-ddc2d944d4c5">
+<Record fieldDelimiter="," name="SimpleOrder" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="0" __sourcePath="{}/object/custormerId" containerType="SINGLE" label="custormerId" name="custormerId" type="string"/>
+</Record>
+</Metadata>
+<Dictionary>
+<Entry id="DictionaryEntry0" input="true" name="inputPayload" output="false" type="object"/>
+<Entry id="DictionaryEntry1" input="false" name="outputPayload" output="true" type="object"/>
+</Dictionary>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" fileURL="dict:inputPayload" guiName="Pojo READER" guiX="20" guiY="20" id="BEAN_READER0" type="BEAN_READER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context outPort="0" sequenceField="__id" xpath=".">
+  <Mapping cloverField="custormerId" trim="true" xpath="custormerId"/>
+</Context>
+]]></attr>
+<attr name="_data_format"><![CDATA[JAVA]]></attr>
+<attr name="schema"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><schema-object>
+  <typed-object-ref type-ref="fr.polytech.unice.soa1.misterDiscount.business.SimpleOrder"/>
+  <typed-object type="fr.polytech.unice.soa1.misterDiscount.business.SimpleOrder">
+    <typed-object-ref name="custormerId" type-ref="java.lang.String"/>
+    <schema-collection name="itemquantity" type="java.util.List">
+      <typed-object-ref type-ref="fr.polytech.unice.soa1.misterDiscount.business.ItemQuantity"/>
+    </schema-collection>
+  </typed-object>
+  <typed-object type="fr.polytech.unice.soa1.misterDiscount.business.ItemQuantity">
+    <typed-object-ref name="productId" type-ref="java.lang.String"/>
+    <typed-object-ref name="quantity" type-ref="int"/>
+  </typed-object>
+  <typed-object type="java.lang.String"/>
+  <typed-object type="int"/>
+</schema-object>
+]]></attr>
+</Node>
+<Node cacheInMemory="true" charset="UTF-8" enabled="enabled" fileURL="dict:outputPayload" guiName="XML WRITER" guiX="900" guiY="20" id="EXT_XML_WRITER0" type="EXT_XML_WRITER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<object xmlns:clover="http://www.cloveretl.com/ns/xmlmapping" clover:inPort="0">
+  <custormerId>$0.custormerId</custormerId>
+</object>]]></attr>
+<attr name="_data_format"><![CDATA[XML]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Foreach 'object' -&gt; 'object'" guiX="460" guiY="20" id="FOREACH_OBJECT_OBJECT" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = input.__id;
+//END -> DO NOT REMOVE
+output.custormerId = input.custormerId;
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="BEAN_READER0:0" guiBendpoints="" id="Edge0" inPort="Port 0 (in)" metadata="318864d7-248a-4fd5-972c-ddc2d944d4c5" outPort="Port 0 (out)" toNode="FOREACH_OBJECT_OBJECT:0"/>
+<Edge debugMode="true" fromNode="FOREACH_OBJECT_OBJECT:0" guiBendpoints="" id="Edge1" inPort="Port 0 (in)" metadata="3e909a6b-e491-4951-ba6f-fe057a979fbb" outPort="Port 0 (out)" toNode="EXT_XML_WRITER0:0"/>
+</Phase>
+</Graph>

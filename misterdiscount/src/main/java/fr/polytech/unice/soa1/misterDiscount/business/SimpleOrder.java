@@ -8,15 +8,20 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlType(name="simple_order")
 public class SimpleOrder {
-	private String custormerId;
+	/**
+	 * 
+	 */
+	private String customerId;
 	private List<ItemQuantity> itemquantity;
+	
+	public SimpleOrder() { }
 	
 	@XmlElement(name = "customerId")
 	public String getCustormerId() {
-		return custormerId;
+		return customerId;
 	}
 	public void setCustormerId(String custormerId) {
-		this.custormerId = custormerId;
+		this.customerId = custormerId;
 	}
 	
 	@XmlElement(name = "listItemQuantity")
@@ -26,5 +31,7 @@ public class SimpleOrder {
 	public void setItemquantity(List<ItemQuantity> itemquantity) {
 		this.itemquantity = itemquantity;
 	} 
+	
+	
 
 }

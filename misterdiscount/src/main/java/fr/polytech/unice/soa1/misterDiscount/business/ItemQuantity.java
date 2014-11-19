@@ -4,7 +4,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlType(name="itemQuantity")
-public class ItemQuantity {
+public class ItemQuantity{
+	/**
+	 * 
+	 */
 	private String productId;
 	private int quantity;
 	

@@ -155,15 +155,20 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Response createOrder(Integer id, OrderInput input) {
-        /*
+
+        System.out.println("customer id: " + id);
+        System.out.println("input: "+ input.getProductOrders().get(0).getId());
+
         Order order = new Order();
         order.setOrderId(orders.getOrders().size()+1);
         order.setStatus(OrderStatus.ORDERED);
-
+        /*
         if(addresses.getAddressesByCustomerId(id) != null) {
             Address deliveryAddress = addresses.getAddressesByCustomerId(id).get(0);
             order.setDeliveryAddress(deliveryAddress);
         }
+        */
+        /*
 
         for (ProductOrder p: input.getProductOrders()) {
             Product product = catalogues.getAllProducts().get(p.getId());
@@ -183,6 +188,7 @@ public class CustomerServiceImpl implements CustomerService {
             orders.getCustomersToOrders().put(id, orderList);
         }
         */
+
         OrderOutput result = new OrderOutput();
         /*
         int totalProducts = catalogues.getAllProducts().size();

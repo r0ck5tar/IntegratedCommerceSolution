@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:scripting="http://www.mulesoft.org/schema/mule/scripting" xmlns:ws="http://www.mulesoft.org/schema/mule/ws" xmlns:data-mapper="http://www.mulesoft.org/schema/mule/ee/data-mapper" xmlns:vm="http://www.mulesoft.org/schema/mule/vm" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:cxf="http://www.mulesoft.org/schema/mule/cxf" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
-	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.5.2"
+<mule xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns:scripting="http://www.mulesoft.org/schema/mule/scripting" xmlns:ws="http://www.mulesoft.org/schema/mule/ws" xmlns:data-mapper="http://www.mulesoft.org/schema/mule/ee/data-mapper" xmlns:vm="http://www.mulesoft.org/schema/mule/vm" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:cxf="http://www.mulesoft.org/schema/mule/cxf" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.5.1"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
@@ -11,12 +11,15 @@ http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/m
 http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/current/mule-vm.xsd
 http://www.mulesoft.org/schema/mule/ee/data-mapper http://www.mulesoft.org/schema/mule/ee/data-mapper/current/mule-data-mapper.xsd
 http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd
-http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/current/mule-scripting.xsd">
+http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/current/mule-scripting.xsd
+http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd">
     <data-mapper:config name="Pojo_To_XML" transformationGraphPath="pojo_to_xml.grf" doc:name="Pojo_To_XML"/>
     <data-mapper:config name="XML_To_Pojo" transformationGraphPath="xml_to_pojo.grf" doc:name="XML_To_Pojo"/>
+    <data-mapper:config name="Pojo_To_XML_1" transformationGraphPath="pojo_to_xml_1.grf" doc:name="Pojo_To_XML_1"/>
+    <mulexml:xml-to-object-transformer driverClass="fr.polytech.unice.soa1.misterDiscount.business.SimpleOrder" name="XML_to_Object" doc:name="XML to Object"/>
     <flow name="misterdiscountFlow1" doc:name="misterdiscountFlow1">
         <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="8081" doc:name="HTTP" path="md"/>
-        <cxf:jaxws-service doc:name="MisterDiscount" serviceClass="fr.polytech.unice.soa1.misterDiscount.services.MisterDiscount"/>
+        <cxf:jaxws-service serviceClass="fr.polytech.unice.soa1.misterDiscount.services.MisterDiscount" doc:name="MisterDiscount"/>
         <set-variable variableName="operation" value="#[flowVars.cxf_operation.localPart]" doc:name="Operation"/>
         <choice doc:name="Choice">
             <when expression="#[operation == &quot;takingOrder&quot;]">
@@ -38,12 +41,29 @@ return result;]]></scripting:script>
             </otherwise>
         </choice>
     </flow>
-    <flow name="misterdiscountFlow2" doc:name="misterdiscountFlow2">
-        <vm:inbound-endpoint exchange-pattern="one-way" path="misterDiscount/takingOrder" doc:name="misterDiscount/takingOrder"/>
+    <flow name="takingOrder" doc:name="takingOrder">
+        <vm:inbound-endpoint exchange-pattern="one-way" path="misterDiscount/takingOrder" doc:name="VM"/>
         <set-session-variable variableName="simpleOrder" value="#[message.payload]" doc:name="simpleOrder"/>
-        <logger message="#[sessionVars.simpleOrder] " level="INFO" doc:name="order"/>
+        <foreach doc:name="For Each" collection="#[sessionVars.simpleOrder.itemquantity]" counterVariableName="item">
+            <http:outbound-endpoint exchange-pattern="request-response" host="localhost" port="8081" path="warehouseFacade/getItemDetails" method="GET" doc:name="HTTP - isItemInStock?"/>
+            <choice doc:name="Choice">
+                <when expression="#[message.payload] == true">
+                    <logger message="Product in stock!" level="INFO" doc:name="Logger - Product in Stock"/>
+                </when>
+                <otherwise>
+                    <logger message="Product #[sessionVars.simpleOrder] not in stock." level="INFO" doc:name="Logger - Not in Stock"/>
+                </otherwise>
+            </choice>
+        </foreach>
+    </flow>
+    <flow name="takingOrderBackup" doc:name="takingOrderBackup">
+        <vm:inbound-endpoint exchange-pattern="one-way" path="misterDiscount/takingOrderbackup" doc:name="misterDiscount/takingOrder"/>
+        <set-variable variableName="custId" value="#[message.payload.customerId]" doc:name="custId?"/>
+
+        <logger message="#[flowVars.custId]" level="INFO" doc:name="order"/>
         <data-mapper:transform config-ref="Pojo_To_XML" input-ref="#[sessionVars[&quot;simpleOrder&quot;]]" doc:name="Pojo To XML"/>
-        <http:outbound-endpoint exchange-pattern="request-response" host="localhost" port="8080" path="tf/teamforce/customers/1/order" method="POST" doc:name="HTTP"/>
+
+        <http:outbound-endpoint exchange-pattern="request-response" host="localhost" port="8080" path="tf/teamforce/customers/#[custId]/orders" method="POST" doc:name="HTTP"/>
         <data-mapper:transform config-ref="XML_To_Pojo" doc:name="XML To Pojo"/>
         <logger message="hello" level="INFO" doc:name="Logger"/>
     </flow>

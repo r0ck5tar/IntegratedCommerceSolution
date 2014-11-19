@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51800d0a-dd78-4677-bdf1-2116e623a827" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\user\Documents\Work SI5\SOA\IntegratedCommerceSolution\misterdiscount\src\test\resources\application.xsd" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\user\Documents\Work SI5\SOA\IntegratedCommerceSolution\misterdiscount\src\test\resources\schema.xsd" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerService.java" afterPath="$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerServiceImpl.java" afterPath="$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/misterdiscount/src/main/java/fr/polytech/unice/soa1/misterDiscount/services/MisterDiscount.java" afterPath="$PROJECT_DIR$/misterdiscount/src/main/java/fr/polytech/unice/soa1/misterDiscount/services/MisterDiscount.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/misterdiscount/src/main/java/fr/polytech/unice/soa1/misterDiscount/business/Receipt.java" afterPath="$PROJECT_DIR$/misterdiscount/src/main/java/fr/polytech/unice/soa1/misterDiscount/business/Receipt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/misterdiscount/src/main/java/facadeWH/FacadeWH.java" afterPath="$PROJECT_DIR$/misterdiscount/src/main/java/facadeWH/FacadeWH.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/misterdiscount/src/main/java/facadeWH/FacadeWHImpl.java" afterPath="$PROJECT_DIR$/misterdiscount/src/main/java/facadeWH/FacadeWHImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/misterdiscount/src/main/java/fr/polytech/unice/soa1/misterDiscount/business/ItemQuantity.java" afterPath="$PROJECT_DIR$/misterdiscount/src/main/java/fr/polytech/unice/soa1/misterDiscount/business/ItemQuantity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/misterdiscount/src/main/java/fr/polytech/unice/soa1/misterDiscount/business/SimpleOrder.java" afterPath="$PROJECT_DIR$/misterdiscount/src/main/java/fr/polytech/unice/soa1/misterDiscount/business/SimpleOrder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/misterdiscount/.studio/caches/metadata_contents.xml" afterPath="$PROJECT_DIR$/misterdiscount/.studio/caches/metadata_contents.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/misterdiscount/src/main/app/misterdiscount.xml" afterPath="$PROJECT_DIR$/misterdiscount/src/main/app/misterdiscount.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/misterdiscount/mappings/pojo_to_xml.grf" afterPath="$PROJECT_DIR$/misterdiscount/mappings/pojo_to_xml.grf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FedPSService/tests.xml" afterPath="$PROJECT_DIR$/FedPSService/tests.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MisterDiscountService.iws" />
@@ -82,6 +81,66 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerServiceImpl.java" line="173" class="fr.unice.polytech.soa1.binluqma.teamforce.service.CustomerServiceImpl" package="fr.unice.polytech.soa1.binluqma.teamforce.service">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerServiceImpl.java" line="172" class="fr.unice.polytech.soa1.binluqma.teamforce.service.CustomerServiceImpl" package="fr.unice.polytech.soa1.binluqma.teamforce.service">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerServiceImpl.java" line="163" class="fr.unice.polytech.soa1.binluqma.teamforce.service.CustomerServiceImpl" package="fr.unice.polytech.soa1.binluqma.teamforce.service">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerServiceImpl.java" line="161" class="fr.unice.polytech.soa1.binluqma.teamforce.service.CustomerServiceImpl" package="fr.unice.polytech.soa1.binluqma.teamforce.service">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
@@ -92,52 +151,97 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CustomerServiceImpl.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerServiceImpl.java">
+      <file leaf-file-name="CustomerImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FedPSService/src/main/java/fr/unice/polytech/soa1/FedPS/rpc/CustomerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="199" column="5" selection-start="7309" selection-end="7309" vertical-scroll-proportion="0.9273504" vertical-offset="2511" max-vertical-offset="4080">
+            <state line="19" column="17" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1020">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Quote.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FedPSService/src/main/java/fr/unice/polytech/soa1/FedPS/business/Quote.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="13" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="2176">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Status.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FedPSService/src/main/java/fr/unice/polytech/soa1/FedPS/business/Status.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="1" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="289">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DriversImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FedPSService/src/main/java/fr/unice/polytech/soa1/FedPS/rpc/DriversImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="0" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="901">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Customer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/business/Customer.java">
+        <entry file="file://$PROJECT_DIR$/FedPSService/src/main/java/fr/unice/polytech/soa1/FedPS/rpc/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="13" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+            <state line="11" column="21" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="680">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parcel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FedPSService/src/main/java/fr/unice/polytech/soa1/FedPS/business/Parcel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="13" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1071">
               <folding>
-                <element signature="e#553#554#0" expanded="false" />
-                <element signature="e#566#567#0" expanded="false" />
-                <element signature="e#598#599#0" expanded="false" />
-                <element signature="e#614#615#0" expanded="false" />
-                <element signature="e#650#651#0" expanded="false" />
-                <element signature="e#670#671#0" expanded="false" />
-                <element signature="e#719#720#0" expanded="false" />
-                <element signature="e#749#750#0" expanded="false" />
-                <element signature="e#784#785#0" expanded="false" />
-                <element signature="e#803#804#0" expanded="false" />
-                <element signature="e#850#851#0" expanded="false" />
-                <element signature="e#878#879#0" expanded="false" />
-                <element signature="e#910#911#0" expanded="false" />
-                <element signature="e#926#927#0" expanded="false" />
-                <element signature="e#967#968#0" expanded="false" />
-                <element signature="e#989#990#0" expanded="false" />
-                <element signature="e#1021#1022#0" expanded="false" />
-                <element signature="e#1037#1038#0" expanded="false" />
-                <element signature="e#1078#1079#0" expanded="false" />
+                <element signature="e#0#1643#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#819#820#0" expanded="false" />
+                <element signature="e#843#844#0" expanded="false" />
+                <element signature="e#884#885#0" expanded="false" />
+                <element signature="e#912#913#0" expanded="false" />
+                <element signature="e#987#988#0" expanded="false" />
+                <element signature="e#1016#1017#0" expanded="false" />
+                <element signature="e#1067#1068#0" expanded="false" />
                 <element signature="e#1100#1101#0" expanded="false" />
+                <element signature="e#1178#1179#0" expanded="false" />
+                <element signature="e#1209#1210#0" expanded="false" />
+                <element signature="e#1259#1260#0" expanded="false" />
+                <element signature="e#1296#1297#0" expanded="false" />
+                <element signature="e#1374#1375#0" expanded="false" />
+                <element signature="e#1400#1401#0" expanded="false" />
+                <element signature="e#1447#1448#0" expanded="false" />
+                <element signature="e#1476#1477#0" expanded="false" />
+                <element signature="e#1542#1543#0" expanded="false" />
+                <element signature="e#1564#1565#0" expanded="false" />
+                <element signature="e#1604#1605#0" expanded="false" />
+                <element signature="e#1633#1634#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Customers.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/business/mockdata/Customers.java">
+      <file leaf-file-name="CustomerService.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="49" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="1071">
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state line="405" column="6" selection-start="12270" selection-end="12270" vertical-scroll-proportion="0.3324573" vertical-offset="6513" max-vertical-offset="7293">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Data.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FedPSService/src/main/java/fr/unice/polytech/soa1/FedPS/business/Data.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="17" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1870">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,7 +249,7 @@
       <file leaf-file-name="customers.csv" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/resources/customers.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="6" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1802">
+            <state line="16" column="6" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1802">
               <folding />
             </state>
           </provider>
@@ -154,58 +258,7 @@
       <file leaf-file-name="catalogues.csv" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/resources/catalogues.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="15" selection-start="18" selection-end="33" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1802">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderStatus.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/business/OrderStatus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="12" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CatalogueInput.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/docmessages/CatalogueInput.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="510">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Order.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/business/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="612">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Catalogues.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/business/mockdata/Catalogues.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="13" selection-start="1910" selection-end="1910" vertical-scroll-proportion="0.0" vertical-offset="573" max-vertical-offset="1309">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#2596#2597#0" expanded="false" />
-                <element signature="e#2617#2618#0" expanded="false" />
-                <element signature="e#2669#2670#0" expanded="false" />
-                <element signature="e#2691#2692#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="387" column="6" selection-start="11568" selection-end="11568" vertical-scroll-proportion="0.0" vertical-offset="6222" max-vertical-offset="7293">
+            <state line="1" column="15" selection-start="18" selection-end="33" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1802">
               <folding />
             </state>
           </provider>
@@ -234,9 +287,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="width" value="1598" />
-    <option name="height" value="870" />
+    <option name="x" value="24" />
+    <option name="y" value="-8" />
+    <option name="width" value="1584" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -344,32 +398,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MisterDiscountService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IntegratedCommerceSolution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TeamForceService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -447,86 +475,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="teamforce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docmessages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MisterDiscountService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IntegratedCommerceSolution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TeamForceService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teamforce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MisterDiscountService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IntegratedCommerceSolution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TeamForceService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teamforce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockdata" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -841,15 +789,18 @@
       <workItem from="1415715564009" duration="2854000" />
       <workItem from="1415827611535" duration="82000" />
       <workItem from="1415908595896" duration="4770000" />
+      <workItem from="1416395971250" duration="993000" />
+      <workItem from="1416396980930" duration="3625000" />
+      <workItem from="1416408297820" duration="1276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14322000" />
+    <option name="totallyTimeSpent" value="20216000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="0" width="1598" height="870" extended-state="1" />
-    <editor active="true" />
+    <frame x="24" y="-8" width="1584" height="916" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -873,8 +824,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26548672" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328084" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25956634" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279703" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -903,73 +854,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="85" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="4063">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/business/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="52" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="374">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/business/Catalogue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="21" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="408">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/business/mockdata/Catalogues.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="729" selection-end="729" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1479">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2596#2597#0" expanded="false" />
-            <element signature="e#2617#2618#0" expanded="false" />
-            <element signature="e#2669#2670#0" expanded="false" />
-            <element signature="e#2691#2692#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="88" selection-start="2001" selection-end="2001" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1292">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/ManagementService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="17" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="476">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RedWarehouseService/src/main/java/fr/unice/polytech/soa1/teamLeaderREST/TeamLeaderRESTImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RedWarehouseService/src/main/java/fr/unice/polytech/soa1/employeeRPC/EmployeeRPC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="17" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="663">
-          <folding />
-        </state>
+        <state line="12" column="17" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="663" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RedWarehouseService/src/main/java/fr/unice/polytech/soa1/retailerDoc/RetailerDoc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="17" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="493">
-          <folding />
-        </state>
+        <state line="17" column="17" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="493" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerService.java">
@@ -1003,13 +895,7 @@
     <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/business/mockdata/Catalogues.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="0" selection-start="2295" selection-end="2295" vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1445">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2596#2597#0" expanded="false" />
-            <element signature="e#2617#2618#0" expanded="false" />
-            <element signature="e#2669#2670#0" expanded="false" />
-            <element signature="e#2691#2692#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1029,23 +915,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RedWarehouseService/src/main/java/fr/unice/polytech/soa1/teamLeaderREST/TeamLeaderRESTImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1615">
-          <folding />
-        </state>
+        <state line="21" column="13" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1615" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RedWarehouseService/src/main/java/fr/unice/polytech/soa1/employeeRPC/EmployeeRPC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="17" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="663">
-          <folding />
-        </state>
+        <state line="12" column="17" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="663" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RedWarehouseService/src/main/java/fr/unice/polytech/soa1/retailerDoc/RetailerDoc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="17" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="493">
-          <folding />
-        </state>
+        <state line="17" column="17" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="493" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/business/mockdata/Addresses.java">
@@ -1090,23 +970,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RedWarehouseService/src/main/java/fr/unice/polytech/soa1/teamLeaderREST/TeamLeaderRESTImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1615">
-          <folding />
-        </state>
+        <state line="21" column="13" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1615" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RedWarehouseService/src/main/java/fr/unice/polytech/soa1/employeeRPC/EmployeeRPC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="17" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="663">
-          <folding />
-        </state>
+        <state line="12" column="17" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="663" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RedWarehouseService/src/main/java/fr/unice/polytech/soa1/retailerDoc/RetailerDoc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="17" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="493">
-          <folding />
-        </state>
+        <state line="17" column="17" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="493" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/business/mockdata/Addresses.java">
@@ -1140,23 +1014,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RedWarehouseService/src/main/java/fr/unice/polytech/soa1/teamLeaderREST/TeamLeaderRESTImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1394">
-          <folding />
-        </state>
+        <state line="21" column="13" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1394" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RedWarehouseService/src/main/java/fr/unice/polytech/soa1/employeeRPC/EmployeeRPC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="17" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-          <folding />
-        </state>
+        <state line="12" column="17" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RedWarehouseService/src/main/java/fr/unice/polytech/soa1/retailerDoc/RetailerDoc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="17" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <folding />
-        </state>
+        <state line="17" column="17" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -1211,37 +1079,14 @@
     <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/business/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="13" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
-          <folding>
-            <element signature="e#553#554#0" expanded="false" />
-            <element signature="e#566#567#0" expanded="false" />
-            <element signature="e#598#599#0" expanded="false" />
-            <element signature="e#614#615#0" expanded="false" />
-            <element signature="e#650#651#0" expanded="false" />
-            <element signature="e#670#671#0" expanded="false" />
-            <element signature="e#719#720#0" expanded="false" />
-            <element signature="e#749#750#0" expanded="false" />
-            <element signature="e#784#785#0" expanded="false" />
-            <element signature="e#803#804#0" expanded="false" />
-            <element signature="e#850#851#0" expanded="false" />
-            <element signature="e#878#879#0" expanded="false" />
-            <element signature="e#910#911#0" expanded="false" />
-            <element signature="e#926#927#0" expanded="false" />
-            <element signature="e#967#968#0" expanded="false" />
-            <element signature="e#989#990#0" expanded="false" />
-            <element signature="e#1021#1022#0" expanded="false" />
-            <element signature="e#1037#1038#0" expanded="false" />
-            <element signature="e#1078#1079#0" expanded="false" />
-            <element signature="e#1100#1101#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/business/mockdata/Customers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="49" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="1071">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1262,13 +1107,7 @@
     <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/business/mockdata/Catalogues.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="13" selection-start="1910" selection-end="1910" vertical-scroll-proportion="0.0" vertical-offset="573" max-vertical-offset="1309">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2596#2597#0" expanded="false" />
-            <element signature="e#2617#2618#0" expanded="false" />
-            <element signature="e#2669#2670#0" expanded="false" />
-            <element signature="e#2691#2692#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1279,16 +1118,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerService.java">
+    <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="387" column="6" selection-start="11568" selection-end="11568" vertical-scroll-proportion="0.0" vertical-offset="6222" max-vertical-offset="7293">
+        <state line="189" column="10" selection-start="6715" selection-end="6715" vertical-scroll-proportion="0.73706007" vertical-offset="2636" max-vertical-offset="4182">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/FedPSService/src/main/java/fr/unice/polytech/soa1/FedPS/rpc/DriversImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="5" selection-start="7309" selection-end="7309" vertical-scroll-proportion="0.9273504" vertical-offset="2511" max-vertical-offset="4080">
+        <state line="26" column="0" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FedPSService/src/main/java/fr/unice/polytech/soa1/FedPS/business/Quote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FedPSService/src/main/java/fr/unice/polytech/soa1/FedPS/business/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="1" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FedPSService/src/main/java/fr/unice/polytech/soa1/FedPS/rpc/CustomerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="17" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FedPSService/src/main/java/fr/unice/polytech/soa1/FedPS/rpc/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="21" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FedPSService/src/main/java/fr/unice/polytech/soa1/FedPS/business/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="17" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="1632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FedPSService/src/main/java/fr/unice/polytech/soa1/FedPS/business/Parcel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1071">
+          <folding>
+            <element signature="e#0#1643#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#819#820#0" expanded="false" />
+            <element signature="e#843#844#0" expanded="false" />
+            <element signature="e#884#885#0" expanded="false" />
+            <element signature="e#912#913#0" expanded="false" />
+            <element signature="e#987#988#0" expanded="false" />
+            <element signature="e#1016#1017#0" expanded="false" />
+            <element signature="e#1067#1068#0" expanded="false" />
+            <element signature="e#1100#1101#0" expanded="false" />
+            <element signature="e#1178#1179#0" expanded="false" />
+            <element signature="e#1209#1210#0" expanded="false" />
+            <element signature="e#1259#1260#0" expanded="false" />
+            <element signature="e#1296#1297#0" expanded="false" />
+            <element signature="e#1374#1375#0" expanded="false" />
+            <element signature="e#1400#1401#0" expanded="false" />
+            <element signature="e#1447#1448#0" expanded="false" />
+            <element signature="e#1476#1477#0" expanded="false" />
+            <element signature="e#1542#1543#0" expanded="false" />
+            <element signature="e#1564#1565#0" expanded="false" />
+            <element signature="e#1604#1605#0" expanded="false" />
+            <element signature="e#1633#1634#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamForceService/src/main/java/fr/unice/polytech/soa1/binluqma/teamforce/service/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="405" column="6" selection-start="12270" selection-end="12270" vertical-scroll-proportion="0.3324573" vertical-offset="6513" max-vertical-offset="7293">
           <folding />
         </state>
       </provider>
